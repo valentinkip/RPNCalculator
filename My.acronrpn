@@ -121,7 +121,7 @@
 			</forePen>
 		</style>
 
-		<style ID="OperatorButtonStyle.NoPadding" ref="OperatorButtonStyle" padding="0">
+		<style ID="OperatorButtonWithLongPressStyle" ref="OperatorButtonStyle" padding="0">
 		</style>
 
 		<style ID="OperatorButtonWithLongPress.ArrayStyle" ref="OperatorButtonStyle" padding="0">
@@ -577,7 +577,7 @@
 							<button label="4" action="StackBox.Digit4"/>
 							<button label="5" action="StackBox.Digit5"/>
 							<button label="6" action="StackBox.Digit6"/>
-							<button action="MathSubtract.Action" longPressAction="MathSqrt.Action" style="OperatorButtonStyle.NoPadding">
+							<button action="MathSubtract.Action" longPressAction="MathSqrt.Action" style="OperatorButtonWithLongPressStyle">
 								<array alignment="vertical" style="OperatorButtonWithLongPress.ArrayStyle">
 									<label label="-" size="0.75"/>
 									<array alignment="horizontal" size="0.25" style="LongPressActionStyle">
@@ -587,7 +587,7 @@
 									</array>
 								</array>
 							</button>
-							<button action="MathDivide.Action" longPressAction="MathDivInvert.Action" style="OperatorButtonStyle.NoPadding">
+							<button action="MathDivide.Action" longPressAction="MathDivInvert.Action" style="OperatorButtonWithLongPressStyle">
 								<array alignment="vertical" style="OperatorButtonWithLongPress.ArrayStyle">
 									<label label="÷" size="0.75"/>
 									<array alignment="horizontal" size="0.25" style="LongPressActionStyle">
@@ -603,7 +603,7 @@
 							<button label="1" action="StackBox.Digit1" longPressAction="MathI.Action"/>
 							<button label="2" action="StackBox.Digit2"/>
 							<button label="3" action="StackBox.Digit3"/>
-							<button action="MathAdd.Action" longPressAction="MathSquare.Action" style="OperatorButtonStyle.NoPadding">
+							<button action="MathAdd.Action" longPressAction="MathSquare.Action" style="OperatorButtonWithLongPressStyle">
 								<array alignment="vertical" style="OperatorButtonWithLongPress.ArrayStyle">
 									<label label="+" size="0.75"/>
 									<array alignment="horizontal" size="0.25" style="LongPressActionStyle">
@@ -613,7 +613,7 @@
 									</array>
 								</array>
 							</button>
-							<button action="MathMultiply.Action" longPressAction="MathPower.Action" style="OperatorButtonStyle.NoPadding">
+							<button action="MathMultiply.Action" longPressAction="MathPower.Action" style="OperatorButtonWithLongPressStyle">
 								<array alignment="vertical" style="OperatorButtonWithLongPress.ArrayStyle">
 									<label label="x" size="0.75"/>
 									<array alignment="horizontal" size="0.25" style="LongPressActionStyle">
