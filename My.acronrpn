@@ -456,23 +456,25 @@
 							<button label="&#x279D; r∠θ" action="MathToMagnitudePhase.Action" longPressAction="MathToMagnitudePhaseD.Action" pageFoldover="true"/>
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="piPg1" onPanel="ScientificToolbars"/>
 						</array>
+					</panel>
 
-						<array ID="convPg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
-							<button ID="inchToCm.Button" constant_multiply="inchToCm" label="in⇒cm" pageFoldover="true"/>
-							<button ID="ftToM.Button" constant_multiply="ftToM" label="ft⇒m" pageFoldover="true"/>
-							<button ID="ydToM.Button" constant_multiply="ydToM" label="yd⇒m" pageFoldover="true"/>
-							<button ID="miToKm.Button" constant_multiply="miToKm" label="mi⇒km" pageFoldover="true"/>
-							<button label="Pg 1/2 &#x25B7;" activatePane="convPg2" onPanel="ScientificToolbars"/>
-						</array>
-						<array ID="convPg2" alignment="horizontal" style="ToolbarButtonStyle1NI">
-							<button ID="nmToKm.Button" constant_multiply="nmToKm" label="nm⇒km" pageFoldover="true"/>
-							<button ID="galToL.Button" constant_multiply="galToL" label="gal⇒L" pageFoldover="true"/>
+					<panel ID="ConversionsToolbar" style="ToolbarButtonStyle1" size="0.2">
+						<array ID="conversions" alignment="vertical" style="ToolbarButtonStyle1NI">
+							<array alignment="horizontal" style="ToolbarButtonStyle1NI" size="0.5">
+								<button ID="inchToCm.Button" constant_multiply="inchToCm" label="in⇒cm" pageFoldover="true"/>
+								<button ID="ftToM.Button" constant_multiply="ftToM" label="ft⇒m" pageFoldover="true"/>
+								<button ID="ydToM.Button" constant_multiply="ydToM" label="yd⇒m" pageFoldover="true"/>
+								<button ID="miToKm.Button" constant_multiply="miToKm" label="mi⇒km" pageFoldover="true"/>
+							</array>
+							<array alignment="horizontal" style="ToolbarButtonStyle1NI" size="0.5">
+								<button ID="nmToKm.Button" constant_multiply="nmToKm" label="nm⇒km" pageFoldover="true"/>
+								<button ID="galToL.Button" constant_multiply="galToL" label="gal⇒L" pageFoldover="true"/>
 <!--
-							<button ID="butAcreToM2" constant_multiply="convAcreToM2" label="acre⇒m" superscript="2" pageFoldover="true"/>
+								<button ID="butAcreToM2" constant_multiply="convAcreToM2" label="acre⇒m" superscript="2" pageFoldover="true"/>
 -->
-							<button ID="ozToG.Button" constant_multiply="ozToG" label="oz⇒g" pageFoldover="true"/>
-							<button ID="lbToKg.Button" constant_multiply="lbToKg" label="lb⇒kg" pageFoldover="true"/>
-							<button label="&#x25C1; Pg 2/2" activatePane="convPg1" onPanel="ScientificToolbars"/>
+								<button ID="ozToG.Button" constant_multiply="ozToG" label="oz⇒g" pageFoldover="true"/>
+								<button ID="lbToKg.Button" constant_multiply="lbToKg" label="lb⇒kg" pageFoldover="true"/>
+							</array>
 						</array>
 					</panel>
 
@@ -1024,24 +1026,28 @@
 				<panel ref="ScientificToolbars" pane ="modePg2"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 			</button>
 
 			<button ref="ModeBin" event="click">
 				<panel ref="IntegerToolbars" pane="iModePg1"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 			</button>
 
 			<button ref="ModeDec" event="click">
 				<panel ref="IntegerToolbars" pane="iModePg1"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 			</button>
 
 			<button ref="ModeHex" event="click">
 				<panel ref="IntegerToolbars" pane="iModePg1"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 			</button>
 		</region>
 
@@ -1049,6 +1055,7 @@
 		<region>
 			<panel ref="ScientificToolbars" event="changed">
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
@@ -1056,6 +1063,23 @@
 
 			<panel ref="ScientificToolbars" event="nochange">
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="toggle"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="ConversionsToolbar" event="changed">
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="ConversionsToolbar" event="nochange">
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="toggle"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
@@ -1064,6 +1088,7 @@
 			<panel ref="SharedToolbars" event="changed">
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
@@ -1071,6 +1096,7 @@
 			<panel ref="SharedToolbars" event="nochange">
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="toggle"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
@@ -1079,6 +1105,7 @@
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
 
@@ -1086,6 +1113,7 @@
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="toggle"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
 		</region>
@@ -1094,6 +1122,7 @@
 		<region>
 			<button ref="StatButton" event="click">
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="StatisticsToolbars" expanded="true"/>
@@ -1330,7 +1359,7 @@
 		<!-- Unit Conversions -->
 		<region>
 			<button ref="PercentButton" event="longPress">
-				<panel ref="ScientificToolbars" pane="convPg1"/>
+				<panel ref="ConversionsToolbar" pane="conversions"/>
 			</button>
 
 			<button ref="inchToCm.Button" event="longPress">
