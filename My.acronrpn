@@ -267,6 +267,7 @@
 							highlightPen="HighlightPen"
 							dividerPen="DividerPen"
 					/>
+
 					<panel ID="SelectionToolbars" style="ToolbarButtonStyle1NI" size="0.1">
 						<array ID="selectionPg1" alignment="horizontal">
 							<button label="dup" subscript="n" action="StackBox.DupN"/>
@@ -283,6 +284,7 @@
 							<button label="&#x25C1; Pg 2/2" activatePane="selectionPg1" onPanel="SelectionToolbars"/>
 						</array>
 					</panel>
+
 					<panel ID="ScientificToolbars" style="ToolbarButtonStyle1" size="0.1">
 						<array ID="mathPg1" alignment="horizontal">
 							<button label="factor" action="MathFactor.Action"/>
@@ -309,6 +311,7 @@
 							<button label="conj" action="MathConj.Action"/>
 							<button label="&#x25C1; Pg 3/3" style="ToolbarButtonStyle1NI" activatePane="mathPg1" onPanel="ScientificToolbars"/>
 						</array>
+
 						<array ID="sinPg1" alignment="horizontal">
 							<button label="sin x°" action="MathSinD.Action"/>
 							<button label="sin" superscript="-1" subscript="deg" action="MathASinD.Action"/>
@@ -323,6 +326,7 @@
 							<button label="sinh" superscript="-1" action="MathASinh.Action"/>
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="sinPg1" onPanel="ScientificToolbars"/>
 						</array>
+
 						<array ID="cosPg1" alignment="horizontal">
 							<button label="cos x°" action="MathCosD.Action"/>
 							<button label="cos" superscript="-1" subscript="deg" action="MathACosD.Action"/>
@@ -337,6 +341,7 @@
 							<button label="cosh" superscript="-1" action="MathACosh.Action"/>
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="cosPg1" onPanel="ScientificToolbars"/>
 						</array>
+
 						<array ID="tanPg1" alignment="horizontal">
 							<button label="tan x°" action="MathTanD.Action"/>
 							<button label="tan" superscript="-1" subscript="deg" action="MathATanD.Action"/>
@@ -351,6 +356,7 @@
 							<button label="tanh" superscript="-1" action="MathATanh.Action"/>
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="tanPg1" onPanel="ScientificToolbars"/>
 						</array>
+
 						<array ID="modePg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
 							<panel ID="ExactApprox">
 								<button ID="ExactButton" action="StackBox.ModeApprox" label="exact"/>
@@ -392,6 +398,7 @@
 							<button ID="ModeHex" label="hex" action="StackBox.ModeHex"/>
 							<button label="&#x25C1; Pg 2/2" activatePane="modePg1" onPanel="ScientificToolbars"/>
 						</array>
+
 						<array ID="logPg1" alignment="horizontal">
 							<button label="e" superscript="x" action="MathExp.Action"/>
 							<button label="ln" action="MathLn.Action"/>
@@ -406,6 +413,7 @@
 							<button label="log" subscript="x" parameter="y" action="MathLogn.Action"/>
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="logPg1" onPanel="ScientificToolbars"/>
 						</array>
+
 						<array ID="powerRoot" alignment="horizontal">
 							<button label="x" superscript="2" action="MathSquare.Action"/>
 							<button label="y" superscript="x" action="MathPower.Action"/>
@@ -426,12 +434,14 @@
 								</MathDivInvert>
 							</button>
 						</array>
+
 						<array ID="prob" alignment="horizontal">
 							<button label="x!" action="MathFactorial.Action"/>
 							<button label="C" subscript="(y, x)" action="MathNCR.Action"/>
 							<button label="P" subscript="(y, x)" action="MathNPR.Action"/>
 							<button label="random" action="MathRandom.Action" style="ToolbarButtonStyle1NI"/>
 						</array>
+
 						<array ID="piPg1" alignment="horizontal">
 							<button label="π" action="MathPI.Action"/>
 							<button label="e" action="MathE.Action"/>
@@ -447,6 +457,7 @@
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="piPg1" onPanel="ScientificToolbars"/>
 						</array>
 					</panel>
+
 					<panel ID="SharedToolbars" style="ToolbarButtonStyle1NI" size="0.1">
 						<array ID="stackPg1" alignment="horizontal">
 							<button label="x&#x21CB;y" action="StackBox.Swap2"/>
@@ -463,6 +474,7 @@
 							<button label="&#x25C1; Pg 2/2" activatePane="stackPg1" onPanel="SharedToolbars"/>
 						</array>
 					</panel>
+
 					<panel ID="IntegerToolbars" style="ToolbarButtonStyle1" size="0.1">
 						<array ID="iMathPg1" alignment="horizontal">
 							<button label="and" action="MathAnd.Action"/>
@@ -483,6 +495,7 @@
 							<button label="&gt;&gt;" action="MathRShift.Action"/>
 							<button label="&#x25C1; Pg 2/2" activatePane="iMathPg1" onPanel="IntegerToolbars" style="ToolbarButtonStyle1NI"/>
 						</array>
+
 						<array ID="iModePg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
 							<button ID="iModeSci" label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI"/>
 							<button ID="iModeBin" label="bin" action="StackBox.ModeBin"/>
@@ -498,6 +511,7 @@
 							<button label="&#x25C1; Pg 2/2" activatePane="iModePg1" onPanel="IntegerToolbars"/>
 						</array>
 					</panel>
+
 					<panel ID="StatisticsToolbars" style="ToolbarButtonStyle1NI" size="0.1">
 						<array ID="statMain" alignment="horizontal">
 							<button label="x &#x25BD;" activatePane="statX" onPanel="StatisticsToolbars"/>
@@ -707,6 +721,7 @@
 					</array>
 				</panel>
 			</array>
+			
 			<array ID="MacroPane" alignment="vertical">
 				<macro
 					equationStyle="EquationMacroStyle"
