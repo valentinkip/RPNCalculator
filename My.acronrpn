@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<appearance>
+		<!-- Colors -->
+		<color ID="Black" value="0xFF000000"/>
+		<color ID="White" value="0xFFFFFFFF"/>
+		<color ID="Blue" value="0xFF0000FF"/>
+		<color ID="Cyan" value="0xFF00FFFF"/>
+		<color ID="LightGreen" value="0xFF90EE90"/>
+		<color ID="DarkGray" value="0xFF404040"/>
+		<color ID="DarkSlateGray" value="0xFF2F4F4F"/>
+		<color ID="LightGray" value="0xFFD3D3D3"/>
+		<color ID="ForestGreen" value="0xFF228B22"/>
+		<color ID="Silver" value="0xFFC0C0C0"/>
+		<color ID="Pink" value="0xFFFFC0CB"/>
+		<color ID="AliceBlue" value="0xFFF0F8FF"/>
+		<color ID="Clear" value="0x00000000"/>
+		<color ID="Yellow" value="0xFFFFFF00"/>
+		<color ID="NumberButtonForegroundColor" ref="White"/>
+		<color ID="StaticButtonBackgroundColor" ref="DarkGray"/>
+		<color ID="StaticButtonBorderColor" ref="DarkSlateGray"/>
+		<color ID="OperatorButtonForegroundColor" ref="Cyan"/>
+		<color ID="FunctionButtonForegroundColor" ref="LightGreen"/>
+		<color ID="ToolbarButtonForegroundColor" ref="Black"/>
+		<color ID="ToolbarButtonBackgroundColor" ref="LightGray"/>
+		<color ID="ToolbarButtonBorderColor" ref="Silver"/>
+		<color ID="ClearButtonForegroundColor" ref="Pink"/>
+		<color ID="ConsoleForegroundColor" ref="Black"/>
+		<color ID="ConsoleBackgroundColor" ref="White"/>
+		<color ID="EquationForegroundColor" ref="Black"/>
+		<color ID="ResultsForegroundColor" ref="ForestGreen"/>
+		<color ID="HighlightBackgroundColor" ref="AliceBlue"/>
+		<color ID="HighlightForegroundColor" ref="Blue"/>
+		<color ID="ActiveHighlightColor" ref="Yellow"/>
+		<color ID="MatchingHighlightColor" ref="LightGreen"/>
+		<color ID="EnabledHighlightColor" ref="LightGray"/>
+		<color ID="DisabledHighlightColor" ref="Clear"/>
+
+		<!-- Fonts -->
+		<font ID="NormalFont" family="Roboto" style="regular" size="18"/>
+		<font ID="ThinFont" ref="NormalFont" family="Roboto Condensed Light"/>
+		<font ID="StaticButtonFont" ref="NormalFont"/>
+		<font ID="ToolbarRFont" ref="NormalFont" style="regular" size="18"/>
+		<font ID="ToolbarIFont" ref="ToolbarRFont" style="italic"/>
+		<font ID="ConsoleFont" ref="NormalFont" size="28"/>
+		<font ID="EquationFont" ref="NormalFont" size="18"/>
+		<font ID="EquationIntegerFont" ref="ThinFont" size="18"/>
+		<font ID="ResultsFont" ref="NormalFont" size="28"/>
+		<font ID="ResultsIntegerFont" ref="ThinFont" size="28"/>
+		<font ID="EquationMacroFont" ref="NormalFont" size="28"/>
+		<font ID="EquationMacroIntegerFont" ref="ThinFont" size="28"/>
+		<font ID="ResultsMacroFont" ref="NormalFont" size="18"/>
+		<font ID="ResultsMacroIntegerFont" ref="ThinFont" size="18"/>
+
+		<!-- Brushes -->
+		<brush ID="HighlightBrush">
+			<color ref="HighlightBackgroundColor"/>
+		</brush>
+
+		<brush ID="ActiveHighlightBrush">
+			<color ref="ActiveHighlightColor"/>
+		</brush>
+
+		<brush ID="MatchingHighlightBrush">
+			<color ref="MatchingHighlightColor"/>
+		</brush>
+
+		<brush ID="EnabledHighlightBrush">
+			<color ref="EnabledHighlightColor"/>
+		</brush>
+
+		<brush ID="DisabledHighlightBrush">
+			<color ref="DisabledHighlightColor"/>
+		</brush>
+
+		<!-- Pens -->
+		<pen ID="HighlightPen" size="1.0" dashStyle="dash">
+			<color ref="HighlightForegroundColor"/>
+		</pen>
+
+		<pen ID="DividerPen" size="1.0">
+			<color ref="LightGray"/>
+		</pen>
+
+		<!-- Scales -->
+		<scale ID="FunctionButtonScale"/>
+		<scale ID="ToolbarButtonScale1" max="FunctionButtonScale"/>
+		<scale ID="ToolbarButtonScale2" max="ToolbarButtonScale1"/>
+		<scale ID="ToolbarButtonScale3" max="ToolbarButtonScale2"/>
+
+		<!-- Styles -->
+		<style ID="NumberButtonStyle" padding="5.0">
+			<normalFont ref="StaticButtonFont"/>
+			<forePen size="1.0">
+				<color ref="NumberButtonForegroundColor"/>
+			</forePen>
+			<backBrush>
+				<color ref="StaticButtonBackgroundColor"/>
+			</backBrush>
+			<borderPen size="0.0">
+				<color ref="StaticButtonBorderColor"/>
+			</borderPen>
+			<highlightBrush ref="HighlightBrush"/>
+			<scale/>
+		</style>
+
+		<style ID="EEButtonStyle" ref="NumberButtonStyle" padding="10.0">
+			<scale/>
+		</style>
+
+		<style ID="OperatorButtonStyle" ref="NumberButtonStyle">
+			<forePen size="1.0">
+				<color ref="OperatorButtonForegroundColor"/>
+			</forePen>
+		</style>
+
+		<style ID="EnterButtonStyle" ref="OperatorButtonStyle" padding="0.0">
+			<backBrush>
+				<color ref="Clear"/>
+			</backBrush>
+			<scale/>
+		</style>
+
+		<style ID="BigEnterButtonStyle" ref="EnterButtonStyle" padding="10.0">
+			<backBrush>
+				<color ref="StaticButtonBackgroundColor"/>
+			</backBrush>
+			<scale/>
+		</style>
+
+		<style ID="FunctionButtonStyle" ref="NumberButtonStyle" padding="2.0">
+			<forePen size="1.0">
+				<color ref="FunctionButtonForegroundColor"/>
+			</forePen>
+			<normalFont ref="NormalFont" style="italic" size="8"/>
+			<scale ref="FunctionButtonScale"/>
+		</style>
+
+		<style ID="MenuButtonStyle" ref="FunctionButtonStyle">
+			<normalFont ref="NormalFont" style="regular" size="8"/>
+		</style>
+
+		<style ID="HexButtonStyle" ref="MenuButtonStyle">
+			<forePen size="1.0">
+				<color ref="NumberButtonForegroundColor"/>
+			</forePen>
+		</style>
+
+		<style ID="ToolbarButtonStyle1" ref="FunctionButtonStyle">
+			<normalFont ref="ToolbarIFont"/>
+			<forePen size="1.0">
+				<color ref="ToolbarButtonForegroundColor"/>
+			</forePen>
+			<backBrush>
+				<color ref="ToolbarButtonBackgroundColor"/>
+			</backBrush>
+			<borderPen size="0.0">
+				<color ref="ToolbarButtonBorderColor"/>
+			</borderPen>
+			<scale ref="ToolbarButtonScale1"/>
+		</style>
+
+		<style ID="ToolbarButtonStyle1NI" ref="ToolbarButtonStyle1">
+			<normalFont ref="ToolbarRFont"/>
+		</style>
+
+		<style ID="ToolbarButtonStyle2" ref="ToolbarButtonStyle1" padding="3.0">
+			<scale ref="ToolbarButtonScale2"/>
+		</style>
+
+		<style ID="ToolbarButtonStyle2NI" ref="ToolbarButtonStyle2">
+			<normalFont ref="ToolbarRFont"/>
+		</style>
+
+		<style ID="ToolbarButtonStyle3" ref="ToolbarButtonStyle1">
+			<scale ref="ToolbarButtonScale3"/>
+		</style>
+
+		<style ID="ToolbarButtonStyle3NI" ref="ToolbarButtonStyle3">
+			<normalFont ref="ToolbarRFont"/>
+		</style>
+
+		<style ID="ClearButtonStyle" ref="NumberButtonStyle">
+			<forePen size="1.0">
+				<color ref="ClearButtonForegroundColor"/>
+			</forePen>
+		</style>
+
+		<style ID="ConsoleStyle" padding="5.0">
+			<normalFont ref="ConsoleFont"/>
+			<forePen size="2.0">
+				<color ref="ConsoleForegroundColor"/>
+			</forePen>
+			<backBrush>
+				<color ref="ConsoleBackgroundColor"/>
+			</backBrush>
+			<borderPen size="0.0">
+				<color ref="Clear"/>
+			</borderPen>
+			<highlightBrush ref="HighlightBrush"/>
+			<scale/>
+		</style>
+
+		<style ID="EquationStyle" ref="ConsoleStyle">
+			<normalFont ref="EquationFont"/>
+			<integerFont ref="EquationIntegerFont"/>
+			<forePen size="1.0">
+				<color ref="EquationForegroundColor"/>
+			</forePen>
+		</style>
+
+		<style ID="ResultsStyle" ref="ConsoleStyle">
+			<normalFont ref="ResultsFont"/>
+			<integerFont ref="ResultsIntegerFont"/>
+			<forePen size="2.0">
+				<color ref="ResultsForegroundColor"/>
+			</forePen>
+		</style>
+
+		<style ID="EquationMacroStyle" ref="EquationStyle">
+			<normalFont ref="EquationMacroFont"/>
+			<integerFont ref="EquationMacroIntegerFont"/>
+			<forePen size="2.0">
+				<color ref="EquationForegroundColor"/>
+			</forePen>
+		</style>
+
+		<style ID="ResultsMacroStyle" ref="ConsoleStyle">
+			<normalFont ref="ResultsMacroFont"/>
+			<integerFont ref="ResultsMacroIntegerFont"/>
+			<forePen size="1.0">
+				<color ref="ResultsForegroundColor"/>
+			</forePen>
+		</style>
+	</appearance>
+
+	<layout orientation="portrait" scientific="true" numberFormat="2063" base="10" bits="32">
+		<panel ID="Normal-MacroPanel">
+			<array ID="NormalPane" alignment="vertical">
+				<foldaway ID="ToolbarFoldaway" alignment="bottom">
+					<stack
+							equationStyle="EquationStyle"
+							resultsStyle="ResultsStyle"
+							consoleStyle="ConsoleStyle"
+							highlightBrush="HighlightBrush"
+							highlightPen="HighlightPen"
+							dividerPen="DividerPen"
+					/>
+					<panel ID="SelectionToolbars" style="ToolbarButtonStyle1NI" size="0.1">
+						<array ID="selectionPg1" alignment="horizontal">
+							<button label="dup" subscript="n" action="StackBox.DupN"/>
+							<button label="STO" action="MathMemoryStore.MemoryStore"/>
+							<button label="roll" subscript="n" parameter="&#x25BD;" action="StackBox.RollNDown"/>
+							<button label="roll" subscript="n" parameter="&#x25B3;" action="StackBox.RollNUp"/>
+							<button label="Pg 1/2 &#x25B7;" activatePane="selectionPg2" onPanel="SelectionToolbars"/>
+						</array>
+						<array ID="selectionPg2" alignment="horizontal">
+							<button label="drop" subscript="n" action="StackBox.DropN"/>
+							<button ID="StatButton" label="stat" subscript="n" parameter="&#x25B7;" action="MathStatistics.CalculateStatistics"/>
+							<button ID="ShowEditButton" label="edit" action="MacroBox.ShowEdit"/>
+							<button ID="ShowMacroButton" label="macro" action="MacroBox.ShowMacro"/>
+							<button label="&#x25C1; Pg 2/2" activatePane="selectionPg1" onPanel="SelectionToolbars"/>
+						</array>
+					</panel>
+					<panel ID="ScientificToolbars" style="ToolbarButtonStyle1" size="0.1">
+						<array ID="mathPg1" alignment="horizontal">
+							<button label="factor" action="MathFactor.Action"/>
+							<button label="mod" action="MathMod.Action"/>
+							<button label="lcm" action="MathLCM.Action"/>
+							<button label="gcd" action="MathGCD.Action"/>
+							<button label="Pg 1/3 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="mathPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="mathPg2" alignment="horizontal">
+							<button label="round" action="MathRound.Action"/>
+							<button label="iPart" action="MathIPart.Action"/>
+							<button label="fPart" action="MathFPart.Action"/>
+							<button action="MathAbs.Action">
+								<MathAbs>
+									<MathAtom display="x" integer="1"/>
+								</MathAbs>
+							</button>
+							<button label="Pg 2/3 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="mathPg3" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="mathPg3" alignment="horizontal">
+							<button label="phase" action="MathPhase.Action" longPressAction="MathPhaseD.Action" pageFoldover="true"/>
+							<button label="real" action="MathReal.Action"/>
+							<button label="imag" action="MathImag.Action"/>
+							<button label="conj" action="MathConj.Action"/>
+							<button label="&#x25C1; Pg 3/3" style="ToolbarButtonStyle1NI" activatePane="mathPg1" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="sinPg1" alignment="horizontal">
+							<button label="sin x°" action="MathSinD.Action"/>
+							<button label="sin" superscript="-1" subscript="deg" action="MathASinD.Action"/>
+							<button label="sin" action="MathSinR.Action"/>
+							<button label="sin" superscript="-1" action="MathASinR.Action"/>
+							<button label="Pg 1/2 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="sinPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="sinPg2" alignment="horizontal">
+							<button label="csc" action="MathCscR.Action" longPressAction="MathCscD.Action" pageFoldover="true"/>
+							<button label="csc" superscript="-1" action="MathACscR.Action" longPressAction="MathACscD.Action" pageFoldover="true"/>
+							<button label="sinh" action="MathSinh.Action"/>
+							<button label="sinh" superscript="-1" action="MathASinh.Action"/>
+							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="sinPg1" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="cosPg1" alignment="horizontal">
+							<button label="cos x°" action="MathCosD.Action"/>
+							<button label="cos" superscript="-1" subscript="deg" action="MathACosD.Action"/>
+							<button label="cos" action="MathCosR.Action"/>
+							<button label="cos" superscript="-1" action="MathACosR.Action"/>
+							<button label="Pg 1/2 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="cosPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="cosPg2" alignment="horizontal">
+							<button label="sec" action="MathSecR.Action" longPressAction="MathSecD.Action" pageFoldover="true"/>
+							<button label="sec" superscript="-1" action="MathASecR.Action" longPressAction="MathASecD.Action" pageFoldover="true"/>
+							<button label="cosh" action="MathCosh.Action"/>
+							<button label="cosh" superscript="-1" action="MathACosh.Action"/>
+							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="cosPg1" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="tanPg1" alignment="horizontal">
+							<button label="tan x°" action="MathTanD.Action"/>
+							<button label="tan" superscript="-1" subscript="deg" action="MathATanD.Action"/>
+							<button label="tan" action="MathTanR.Action"/>
+							<button label="tan" superscript="-1" action="MathATanR.Action"/>
+							<button label="Pg 1/2 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="tanPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="tanPg2" alignment="horizontal">
+							<button label="cot" action="MathCotR.Action" longPressAction="MathCotD.Action" pageFoldover="true"/>
+							<button label="cot" superscript="-1" action="MathACotR.Action" longPressAction="MathACotD.Action" pageFoldover="true"/>
+							<button label="tanh" action="MathTanh.Action"/>
+							<button label="tanh" superscript="-1" action="MathATanh.Action"/>
+							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="tanPg1" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="modePg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<panel ID="ExactApprox">
+								<button ID="ExactButton" action="StackBox.ModeApprox" label="exact"/>
+								<button ID="ApproxButton" action="StackBox.ModeExact" label="approx"/>
+							</panel>
+							<panel ID="SciEngAuto">
+								<button ID="Auto" label="normal" action="StackBox.ModeSci"/>
+								<button ID="Sci" label="sci" action="StackBox.ModeEng"/>
+								<button ID="Eng" label="eng" action="StackBox.ModeAuto"/>
+							</panel>
+							<panel ID="FloatFix">
+								<button ID="Float" label="float" action="StackBox.ModeFixed"/>
+								<button ID="Fix" label="fix" action="StackBox.ModeFloat"/>
+							</panel>
+							<panel ID="SigFig">
+								<button ID="Dig15" label="15 digits" action="StackBox.ModeSigFig0" longPressAction="StackBox.ModeSigFig0" pageFoldover="true"/>
+								<button ID="Dig0" label="0 digits" action="StackBox.ModeSigFig2" longPressAction="StackBox.ModeSigFig1" pageFoldover="true"/>
+								<button ID="Dig1" label="1 digits" action="StackBox.ModeSigFig2" longPressAction="StackBox.ModeSigFig2" pageFoldover="true"/>
+								<button ID="Dig2" label="2 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig3" pageFoldover="true"/>
+								<button ID="Dig3" label="3 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig4" pageFoldover="true"/>
+								<button ID="Dig4" label="4 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig5" ageFoldover="true"/>
+								<button ID="Dig5" label="5 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig6" pageFoldover="true"/>
+								<button ID="Dig6" label="6 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig7" pageFoldover="true"/>
+								<button ID="Dig7" label="7 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig8" pageFoldover="true"/>
+								<button ID="Dig8" label="8 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig9" pageFoldover="true"/>
+								<button ID="Dig9" label="9 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig10" pageFoldover="true"/>
+								<button ID="Dig10" label="10 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig11" pageFoldover="true"/>
+								<button ID="Dig11" label="11 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig12" pageFoldover="true"/>
+								<button ID="Dig12" label="12 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig13" pageFoldover="true"/>
+								<button ID="Dig13" label="13 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig14" pageFoldover="true"/>
+								<button ID="Dig14" label="14 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig15" pageFoldover="true"/>
+							</panel>
+							<button label="Pg 1/2 &#x25B7;" activatePane="modePg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="modePg2" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI" enabled="false"/>
+							<button ID="ModeBin" label="bin" action="StackBox.ModeBin"/>
+							<button ID="ModeDec" label="dec" action="StackBox.ModeDec"/>
+							<button ID="ModeHex" label="hex" action="StackBox.ModeHex"/>
+							<button label="&#x25C1; Pg 2/2" activatePane="modePg1" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="logPg1" alignment="horizontal">
+							<button label="e" superscript="x" action="MathExp.Action"/>
+							<button label="ln" action="MathLn.Action"/>
+							<button label="10" superscript="x" action="Math10x.Action"/>
+							<button label="log" action="MathLog.Action"/>
+							<button label="Pg 1/2 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="logPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="logPg2" alignment="horizontal">
+							<button label="2" superscript="x" action="Math2x.Action"/>
+							<button label="log" subscript="2" action="MathLog2.Action"/>
+							<button label="x" superscript="y" action="MathPower.Action2"/>
+							<button label="log" subscript="x" parameter="y" action="MathLogn.Action"/>
+							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="logPg1" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="powerRoot" alignment="horizontal">
+							<button label="x" superscript="2" action="MathSquare.Action"/>
+							<button label="y" superscript="x" action="MathPower.Action"/>
+							<button action="MathSqrt.Action" style="ToolbarButtonStyle2">
+								<MathSqrt>
+									<MathAtom display="x" integer="1"/>
+								</MathSqrt>
+							</button>
+							<button action="MathNRoot.Action" style="ToolbarButtonStyle2">
+								<MathNRoot>
+									<MathAtom display="x" integer="1"/>
+									<MathAtom display="y" integer="1"/>
+								</MathNRoot>
+							</button>
+							<button action="MathDivInvert.Action" style="ToolbarButtonStyle3">
+								<MathDivInvert>
+									<MathAtom display="x" integer="1"/>
+								</MathDivInvert>
+							</button>
+						</array>
+						<array ID="prob" alignment="horizontal">
+							<button label="x%" action="MathPercent.Action"/>
+							<button label="x!" action="MathFactorial.Action"/>
+							<button label="C" subscript="(y, x)" action="MathNCR.Action"/>
+							<button label="P" subscript="(y, x)" action="MathNPR.Action"/>
+							<button label="random" action="MathRandom.Action" style="ToolbarButtonStyle1NI"/>
+						</array>
+						<array ID="piPg1" alignment="horizontal">
+							<button label="π" action="MathPI.Action"/>
+							<button label="e" action="MathE.Action"/>
+							<button label="□°□'□&quot;" action="MathDMS.Action" style="ToolbarButtonStyle1NI"/>
+							<button label="&#x279D; dms" action="MathToDMS.Action"/>
+							<button label="Pg 1/2 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="piPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="piPg2" alignment="horizontal">
+							<button label="ί" action="MathI.Action"/>
+							<button label="y+xί" action="MathI.Action2"/>
+							<button label="y∠x" action="MathMagnitudePhase.Action" longPressAction="MathMagnitudePhaseD.Action" pageFoldover="true"/>
+							<button label="&#x279D; r∠θ" action="MathToMagnitudePhase.Action" longPressAction="MathToMagnitudePhaseD.Action" pageFoldover="true"/>
+							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="piPg1" onPanel="ScientificToolbars"/>
+						</array>
+					</panel>
+					<panel ID="SharedToolbars" style="ToolbarButtonStyle1NI" size="0.1">
+						<array ID="stackPg1" alignment="horizontal">
+							<button label="x&#x21CB;y" action="StackBox.Swap2"/>
+							<button label="STO" action="MathMemoryStore.MemoryStore"/>
+							<button label="RCL" action="MathMemoryStore.MemoryRecall"/>
+							<button label="LSTx" action="MathMemoryStore.LastX"/>
+							<button label="Pg 1/2 &#x25B7;" activatePane="stackPg2" onPanel="SharedToolbars"/>
+						</array>
+						<array ID="stackPg2" alignment="horizontal">
+							<button action="StackBox.Share"/>
+							<button label="open..." action="StackBox.OpenFile"/>
+							<button label="roll" subscript="all" parameter="&#x25BD;" action="StackBox.RollAllDown"/>
+							<button label="roll" subscript="all" parameter="&#x25B3;" action="StackBox.RollAllUp"/>
+							<button label="&#x25C1; Pg 2/2" activatePane="stackPg1" onPanel="SharedToolbars"/>
+						</array>
+					</panel>
+					<panel ID="IntegerToolbars" style="ToolbarButtonStyle1" size="0.1">
+						<array ID="iMathPg1" alignment="horizontal">
+							<button label="and" action="MathAnd.Action"/>
+							<button label="or" action="MathOr.Action"/>
+							<button label="not" action="MathNot.Action"/>
+							<button label="xor" action="MathXor.Action"/>
+							<button label="Pg 1/2 &#x25B7;" activatePane="iMathPg2" onPanel="IntegerToolbars" style="ToolbarButtonStyle1NI"/>
+						</array>
+						<array ID="iMathPg2" alignment="horizontal">
+							<button label="mod" action="MathMod.Action"/>
+							<panel ID="IntButtons">
+								<button ID="Int32" label="int" subscript="32" action="MathInt32.Action"/>
+								<button ID="Int8" label="int" subscript="8" action="MathInt8.Action"/>
+								<button ID="Int16" label="int" subscript="16" action="MathInt16.Action"/>
+								<button ID="Int64" label="int" subscript="64" action="MathInt64.Action"/>
+							</panel>
+							<button label="&lt;&lt;" action="MathLShift.Action"/>
+							<button label="&gt;&gt;" action="MathRShift.Action"/>
+							<button label="&#x25C1; Pg 2/2" activatePane="iMathPg1" onPanel="IntegerToolbars" style="ToolbarButtonStyle1NI"/>
+						</array>
+						<array ID="iModePg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button ID="iModeSci" label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI"/>
+							<button ID="iModeBin" label="bin" action="StackBox.ModeBin"/>
+							<button ID="iModeDec" label="dec" action="StackBox.ModeDec"/>
+							<button ID="iModeHex" label="hex" action="StackBox.ModeHex"/>
+							<button label="Pg 1/2 &#x25B7;" activatePane="iModePg2" onPanel="IntegerToolbars"/>
+						</array>
+						<array ID="iModePg2" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button ID="ModeByte" label="byte" action="StackBox.ModeByte"/>
+							<button ID="ModeWord" label="word" action="StackBox.ModeWord"/>
+							<button ID="ModeDword" label="dword" action="StackBox.ModeDword"/>
+							<button ID="ModeQword" label="qword" action="StackBox.ModeQword"/>
+							<button label="&#x25C1; Pg 2/2" activatePane="iModePg1" onPanel="IntegerToolbars"/>
+						</array>
+					</panel>
+					<panel ID="StatisticsToolbars" style="ToolbarButtonStyle1NI" size="0.1">
+						<array ID="statMain" alignment="horizontal">
+							<button label="x &#x25BD;" activatePane="statX" onPanel="StatisticsToolbars"/>
+							<button label="y &#x25BD;" activatePane="statY" onPanel="StatisticsToolbars"/>
+							<button label="xy &#x25BD;" activatePane="statXY" onPanel="StatisticsToolbars"/>
+							<button label="reg &#x25BD;" activatePane="statReg" onPanel="StatisticsToolbars"/>
+							<button ID="ExitStatButton" label="&#x25C1; Exit" action="MathStatistics.ClearStatistics"/>
+						</array>
+						<array ID="statX" alignment="horizontal">
+							<button label="Σx" action="MathStatistics.StatSumX"/>
+							<button label="Σx" superscript="2" action="MathStatistics.StatSumX2"/>
+							<button label="x̅" action="MathStatistics.StatMeanX"/>
+							<button label="σx" action="MathStatistics.StatStandardDevX"/>
+							<button label="&#x25C1; Back" activatePane="statMain" onPanel="StatisticsToolbars"/>
+						</array>
+						<array ID="statY" alignment="horizontal">
+							<button label="Σy" action="MathStatistics.StatSumY"/>
+							<button label="Σy" superscript="2" action="MathStatistics.StatSumY2"/>
+							<button label="y̅" action="MathStatistics.StatMeanY"/>
+							<button label="σy" action="MathStatistics.StatStandardDevY"/>
+							<button label="&#x25C1; Back" activatePane="statMain" onPanel="StatisticsToolbars"/>
+						</array>
+						<array ID="statXY" alignment="horizontal">
+							<button label="n" action="MathStatistics.StatCount"/>
+							<button label="Σxy" action="MathStatistics.StatSumXY"/>
+							<button label="x̅" subscript="w" action="MathStatistics.StatWeightedMean"/>
+							<button label="σx" subscript="w" action="MathStatistics.StatWeightedStandardDev"/>
+							<button label="&#x25C1; Back" activatePane="statMain" onPanel="StatisticsToolbars"/>
+						</array>
+						<array ID="statReg" alignment="horizontal">
+							<button label="a+b·x" parameter="&#x25BD;" action="MathStatistics.CalcLinearRegression" activatePane="statRegValues" onPanel="StatisticsToolbars"/>
+							<button label="a+b·ln x &#x25BD;" action="MathStatistics.CalcLogarithmicRegression" activatePane="statRegValues" onPanel="StatisticsToolbars" style="ToolbarButtonStyle2NI"/>
+							<button label="a·x" superscript="b" parameter="&#x25BD;" action="MathStatistics.CalcPowerRegression" activatePane="statRegValues" onPanel="StatisticsToolbars"/>
+							<button label="a·b" superscript="x" parameter="&#x25BD;" action="MathStatistics.CalcExponentialRegression" activatePane="statRegValues" onPanel="StatisticsToolbars"/>
+							<button label="&#x25C1; Back" activatePane="statMain" onPanel="StatisticsToolbars"/>
+						</array>
+						<array ID="statRegValues" alignment="horizontal">
+							<button label="a" action="MathStatistics.StatLinRegA"/>
+							<button label="b" action="MathStatistics.StatLinRegB"/>
+							<button label="r" superscript="2" action="MathStatistics.StatLinRegRSquared"/>
+							<button ID="RegressionMacroButton" label="&#x279D; macro" action="MathStatistics.StatRegression" longPressAction="MathStatistics.StatRegressionInverse" pageFoldover="true"/>
+							<button label="&#x25C1; Back" activatePane="statReg" onPanel="StatisticsToolbars"/>
+						</array>
+
+					</panel>
+				</foldaway>
+
+				<panel ID="StaticButtons" size="0.45">
+					<array ID="ScientificStaticButtons" alignment="vertical">
+						<array alignment="horizontal" style="FunctionButtonStyle">
+							<button label="math" style="MenuButtonStyle" activatePane="mathPg1" onPanel="ScientificToolbars" longPressAction="MathFactor.Action"/>
+							<button label="sin" activatePane="sinPg1" onPanel="ScientificToolbars" longPressAction="MathLn.Action"/>
+							<button label="cos" activatePane="cosPg1" onPanel="ScientificToolbars" longPressAction="MathExp.Action"/>
+							<button label="tan" activatePane="tanPg1" onPanel="ScientificToolbars" longPressAction="MathPercent.Action"/>
+							<button label="stack" activatePane="stackPg1" onPanel="SharedToolbars" longPressAction="StackBox.Swap2" style="MenuButtonStyle"/>
+						</array>
+						<array alignment="horizontal" style="FunctionButtonStyle">
+							<button label="mode" activatePane="modePg1" onPanel="ScientificToolbars" style="MenuButtonStyle" longPressAction="StackBox.ModeToggleScientific"/>
+							<button label="log" activatePane="logPg1" onPanel="ScientificToolbars" longPressAction="MathLog.Action"/>
+							<button label="y" superscript="x" activatePane="powerRoot" onPanel="ScientificToolbars" longPressAction="Math10x.Action"/>
+							<button label="x!" activatePane="prob" onPanel="ScientificToolbars" longPressAction="MathFactorial.Action"/>
+							<button label="π" activatePane="piPg1" onPanel="ScientificToolbars" longPressAction="MathPI.Action"/>
+						</array>
+						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+							<button label="↶" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ClearButtonStyle"/>
+							<button label="7" action="StackBox.Digit7"/>
+							<button label="8" action="StackBox.Digit8"/>
+							<button label="9" action="StackBox.Digit9"/>
+							<button label="÷" action="MathDivide.Action" longPressAction="MathNRoot.Action" style="OperatorButtonStyle"/>
+						</array>
+						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ClearButtonStyle"/>
+							<button label="4" action="StackBox.Digit4"/>
+							<button label="5" action="StackBox.Digit5"/>
+							<button label="6" action="StackBox.Digit6"/>
+							<button label="×" action="MathMultiply.Action" longPressAction="MathPower.Action" style="OperatorButtonStyle"/>
+						</array>
+						<array alignment="horizontal" style="NumberButtonStyle" size="0.375">
+							<button action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="BigEnterButtonStyle" size="0.20">
+								<array alignment="vertical" style="EnterButtonStyle">
+									<label label="E"/>
+									<label label="N"/>
+									<label label="T"/>
+									<label label="E"/>
+									<label label="R"/>
+								</array>
+							</button>
+							<array alignment="vertical">
+								<array alignment="horizontal">
+									<button label="1" action="StackBox.Digit1" longPressAction="MathI.Action"/>
+									<button label="2" action="StackBox.Digit2"/>
+									<button label="3" action="StackBox.Digit3"/>
+									<button label="−" action="MathSubtract.Action" longPressAction="MathSqrt.Action" style="OperatorButtonStyle"/>
+								</array>
+								<array alignment="horizontal">
+									<button label="0" action="StackBox.Digit0" longPressAction="MathI.Action2"/>
+									<panel ID="DecimalEEPanel">
+										<button ID="DecimalButton" action="StackBox.Decimal" longPressAction="StackBox.EE"/>
+										<button ID="EEButton" label="EE" action="StackBox.EE" style="EEButtonStyle"/>
+										<button ID="DisabledDecimal" action="StackBox.Decimal" enabled="false"/>
+									</panel>
+									<button label="(-)" action="MathNegation.Action" longPressAction="MathDivInvert.Action"/>
+									<button label="+" action="MathAdd.Action" longPressAction="MathSquare.Action" style="OperatorButtonStyle"/>
+								</array>
+							</array>
+						</array>
+					</array>
+					<array ID="IntegerStaticButtons" alignment="vertical">
+						<array alignment="horizontal" style="HexButtonStyle">
+							<button label="math" style="MenuButtonStyle" activatePane="iMathPg1" onPanel="IntegerToolbars"/>
+							<button ID="DigitD" label="D" action="StackBox.DigitD"/>
+							<button ID="DigitE" label="E" action="StackBox.DigitE"/>
+							<button ID="DigitF" label="F" action="StackBox.DigitF"/>
+							<button label="stack" activatePane="stackPg1" onPanel="SharedToolbars" longPressAction="StackBox.Swap2" style="MenuButtonStyle"/>
+						</array>
+						<array alignment="horizontal" style="HexButtonStyle">
+							<panel ID="BaseButtons" style="MenuButtonStyle">
+								<panel ID="BinButtons">
+									<button ID="Bin8" label="bin" subscript="8" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin16" label="bin" subscript="16" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin32" label="bin" subscript="32" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin64" label="bin" subscript="64" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+								</panel>
+								<panel ID="DecButtons">
+									<button ID="Dec8" label="dec" subscript="8" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec16" label="dec" subscript="16" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec32" label="dec" subscript="32" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec64" label="dec" subscript="64" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+								</panel>
+								<panel ID="HexButtons">
+									<button ID="Hex8" label="hex" subscript="8" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex16" label="hex" subscript="16" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex32" label="hex" subscript="32" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex64" label="hex" subscript="64" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+								</panel>
+							</panel>
+
+							<button ID="DigitA" label="A" action="StackBox.DigitA"/>
+							<button ID="DigitB" label="B" action="StackBox.DigitB"/>
+							<button ID="DigitC" label="C" action="StackBox.DigitC"/>
+							<button label="π" enabled="false" longPressAction="MathLShift.Action" style="FunctionButtonStyle" enableLongPressWhileDisabled="true"/>
+						</array>
+						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+							<button label="↶" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ClearButtonStyle"/>
+							<button ID="Digit7" label="7" action="StackBox.Digit7"/>
+							<button ID="Digit8" label="8" action="StackBox.Digit8"/>
+							<button ID="Digit9" label="9" action="StackBox.Digit9"/>
+							<button label="÷" action="MathDivide.Action" longPressAction="MathRShift.Action" style="OperatorButtonStyle"/>
+						</array>
+						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ClearButtonStyle"/>
+							<button ID="Digit4" label="4" action="StackBox.Digit4"/>
+							<button ID="Digit5" label="5" action="StackBox.Digit5"/>
+							<button ID="Digit6" label="6" action="StackBox.Digit6" longPressAction="StackBox.ModeHex" enableLongPressWhileDisabled="true"/>
+							<button label="×" action="MathMultiply.Action" longPressAction="MathAnd.Action" style="OperatorButtonStyle"/>
+						</array>
+						<array alignment="horizontal" style="NumberButtonStyle" size="0.375">
+							<button action="StackBox.Enter" style="BigEnterButtonStyle" size="0.20">
+								<array alignment="vertical" style="EnterButtonStyle">
+									<label label="E"/>
+									<label label="N"/>
+									<label label="T"/>
+									<label label="E"/>
+									<label label="R"/>
+								</array>
+							</button>
+							<array alignment="vertical">
+								<array alignment="horizontal">
+									<button ID="Digit1" label="1" action="StackBox.Digit1"/>
+									<button ID="Digit2" label="2" action="StackBox.Digit2" longPressAction="StackBox.ModeBin" enableLongPressWhileDisabled="true"/>
+									<button ID="Digit3" label="3" action="StackBox.Digit3"/>
+									<button label="−" action="MathSubtract.Action" longPressAction="MathXor.Action" style="OperatorButtonStyle"/>
+								</array>
+								<array alignment="horizontal">
+									<button ID="Digit0" label="0" action="StackBox.Digit0" longPressAction="StackBox.ModeDec" enableLongPressWhileDisabled="true"/>
+									<button action="StackBox.Decimal" enabled="false"/>
+									<button label="(-)" action="MathNegation.Action" longPressAction="MathNot.Action"/>
+									<button label="+" action="MathAdd.Action" longPressAction="MathOr.Action" style="OperatorButtonStyle"/>
+								</array>
+							</array>
+						</array>
+					</array>
+				</panel>
+
+			</array>
+			<array ID="MacroPane" alignment="vertical">
+				<macro
+						equationStyle="EquationMacroStyle"
+						resultsStyle="ResultsMacroStyle"
+						consoleStyle="ConsoleStyle"
+						activeHighlightPen="HighlightPen"
+						activeHighlightBrush="ActiveHighlightBrush"
+						matchingHighlightBrush="MatchingHighlightBrush"
+						enabledHighlightBrush="EnabledHighlightBrush"
+						disabledHighlightBrush="DisabledHighlightBrush"
+						dividerPen="DividerPen"
+				/>
+				<array alignment="vertical" size="0.505">
+					<panel ID="MacroEditPanel" size="0.10891">
+						<array ID="MacroToolbar" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button ID="SplitButton" label="split" action="MacroBox.Split" enabled="false"/>
+							<button ID="FreezeButton" label="freeze" action="MacroBox.Freeze"/>
+							<button ID="ZoomButton" label="zoom" action="MacroBox.Zoom" enabled="false"/>
+							<button label="push" action="MacroBox.MacroPush"/>
+							<button label="OK" action="MacroBox.MacroOK"/>
+						</array>
+						<array ID="EditToolbar" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button enabled="false"/>
+							<button enabled="false"/>
+							<button ID="EditZoomButton" label="zoom" action="MacroBox.Zoom" enabled="false"/>
+							<button label="cancel" action="MacroBox.Cancel"/>
+							<button label="OK" action="MacroBox.EditOK"/>
+						</array>
+					</panel>
+					<panel ID="MacroButtons">
+						<array ID="ScientificMacroButtons" alignment="vertical">
+							<array alignment="horizontal" style="FunctionButtonStyle">
+								<button label="math" style="MenuButtonStyle" enabled="false"/>
+								<button label="sin" enabled="false"/>
+								<button label="cos" enabled="false"/>
+								<button label="tan" enabled="false"/>
+								<button label="stack" style="MenuButtonStyle" enabled="false"/>
+							</array>
+							<array alignment="horizontal" style="FunctionButtonStyle">
+								<button label="mode" style="MenuButtonStyle" enabled="false"/>
+								<button label="log" enabled="false"/>
+								<button label="y" superscript="x" enabled="false"/>
+								<button label="x!" enabled="false"/>
+								<button label="π" enabled="false"/>
+							</array>
+						</array>
+						<array ID="IntegerMacroButtons" alignment="vertical">
+							<array alignment="horizontal" style="HexButtonStyle">
+								<button label="math" style="MenuButtonStyle" enabled="false"/>
+								<button ID="MacroDigitD" label="D" action="MacroBox.DigitD" enabled="false"/>
+								<button ID="MacroDigitE" label="E" action="MacroBox.DigitE" enabled="false"/>
+								<button ID="MacroDigitF" label="F" action="MacroBox.DigitF" enabled="false"/>
+								<button label="stack" style="MenuButtonStyle" enabled="false"/>
+							</array>
+							<array alignment="horizontal" style="HexButtonStyle">
+								<panel ID="MacroBaseButtons" style="MenuButtonStyle">
+									<panel ID="MacroBinButtons">
+										<button ID="MacroBin8" label="bin" subscript="8" enabled="false"/>
+										<button ID="MacroBin16" label="bin" subscript="16" enabled="false"/>
+										<button ID="MacroBin32" label="bin" subscript="32" enabled="false"/>
+										<button ID="MacroBin64" label="bin" subscript="64" enabled="false"/>
+									</panel>
+									<panel ID="MacroDecButtons">
+										<button ID="MacroDec8" label="dec" subscript="8" enabled="false"/>
+										<button ID="MacroDec16" label="dec" subscript="16" enabled="false"/>
+										<button ID="MacroDec32" label="dec" subscript="32" enabled="false"/>
+										<button ID="MacroDec64" label="dec" subscript="64" enabled="false"/>
+									</panel>
+									<panel ID="MacroHexButtons">
+										<button ID="MacroHex8" label="hex" subscript="8" enabled="false"/>
+										<button ID="MacroHex16" label="hex" subscript="16" enabled="false"/>
+										<button ID="MacroHex32" label="hex" subscript="32" enabled="false"/>
+										<button ID="MacroHex64" label="hex" subscript="64" enabled="false"/>
+									</panel>
+								</panel>
+								<button ID="MacroDigitA" label="A" action="MacroBox.DigitA" enabled="false"/>
+								<button ID="MacroDigitB" label="B" action="MacroBox.DigitB" enabled="false"/>
+								<button ID="MacroDigitC" label="C" action="MacroBox.DigitC" enabled="false"/>
+								<button label="π" style="FunctionButtonStyle" enabled="false"/>
+							</array>
+						</array>
+					</panel>
+
+					<array alignment="horizontal" style="NumberButtonStyle" size="0.16708">
+						<button label="↶" action="MacroBox.DiscardMoveBackward" style="ClearButtonStyle"/>
+						<button ID="MacroDigit7" label="7" action="MacroBox.Digit7"/>
+						<button ID="MacroDigit8" label="8" action="MacroBox.Digit8"/>
+						<button ID="MacroDigit9" label="9" action="MacroBox.Digit9"/>
+						<button label="÷" enabled="false"/>
+					</array>
+					<array alignment="horizontal" style="NumberButtonStyle" size="0.16708">
+						<button label="C" action="MacroBox.Clear" longPressAction="MacroBox.Cancel" style="ClearButtonStyle"/>
+						<button ID="MacroDigit4" label="4" action="MacroBox.Digit4"/>
+						<button ID="MacroDigit5" label="5" action="MacroBox.Digit5"/>
+						<button ID="MacroDigit6" label="6" action="MacroBox.Digit6"/>
+						<button label="×" enabled="false"/>
+					</array>
+					<array alignment="horizontal" style="NumberButtonStyle" size="0.33416">
+						<button action="MacroBox.ApplyMoveForward" style="BigEnterButtonStyle" longPressAction="MacroBox.MemoryRecall" size="0.20">
+							<array alignment="vertical" style="EnterButtonStyle">
+								<label label="E"/>
+								<label label="N"/>
+								<label label="T"/>
+								<label label="E"/>
+								<label label="R"/>
+							</array>
+						</button>
+						<array alignment="vertical">
+							<array alignment="horizontal">
+								<button ID="MacroDigit1" label="1" action="MacroBox.Digit1"/>
+								<button ID="MacroDigit2" label="2" action="MacroBox.Digit2"/>
+								<button ID="MacroDigit3" label="3" action="MacroBox.Digit3"/>
+								<button label="−" enabled="false"/>
+							</array>
+							<array alignment="horizontal">
+								<button ID="MacroDigit0" label="0" action="MacroBox.Digit0"/>
+								<panel ID="MacroDecimalEEPanel">
+									<button ID="MacroDecimalButton" action="MacroBox.Decimal" longPressAction="MacroBox.EE"/>
+									<button ID="MacroEEButton" label="EE" action="MacroBox.EE" style="EEButtonStyle"/>
+									<button ID="MacroDisabledDecimal" action="MacroBox.Decimal" enabled="false"/>
+								</panel>
+								<button label="(-)" action="MacroBox.Negative"/>
+								<button label="+" enabled="false"/>
+							</array>
+						</array>
+					</array>
+				</array>
+			</array>
+		</panel>
+	</layout>
+
+	<behavior>
+		<!-- Switch between decimal and EE based on what is on the console -->
+		<region>
+			<ConsoleNoDecimal>
+				<panel ref="DecimalEEPanel" pane="DecimalButton"/>
+			</ConsoleNoDecimal>
+			<ConsoleHasDecimal>
+				<panel ref="DecimalEEPanel" pane="EEButton"/>
+			</ConsoleHasDecimal>
+			<ConsoleHasEE>
+				<panel ref="DecimalEEPanel" pane="DisabledDecimal"/>
+			</ConsoleHasEE>
+		</region>
+
+		<!-- Show/hide the selection toolbar based on stack selection -->
+		<region>
+			<StackSelected>
+				<foldaway ref="ToolbarFoldaway" pane="SelectionToolbars" expanded="true"/>
+			</StackSelected>
+
+			<StackNoSelect>
+				<foldaway ref="ToolbarFoldaway" pane="SelectionToolbars" expanded="false"/>
+				<panel ref="SelectionToolbars" pane="selectionPg1"/>
+			</StackNoSelect>
+		</region>
+
+		<!-- Enable/disable buttons based on scientific/based-integer mode -->
+		<region>
+			<BaseScientific>
+				<panel ref="StaticButtons" pane="ScientificStaticButtons"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+			</BaseScientific>
+
+			<BaseInteger>
+				<panel ref="StaticButtons" pane="IntegerStaticButtons"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+			</BaseInteger>
+
+			<BaseBin>
+				<button ref="Digit0" enabled="true"/>
+				<button ref="Digit1" enabled="true"/>
+				<button ref="Digit2" enabled="false"/>
+				<button ref="Digit3" enabled="false"/>
+				<button ref="Digit4" enabled="false"/>
+				<button ref="Digit5" enabled="false"/>
+				<button ref="Digit6" enabled="false"/>
+				<button ref="Digit7" enabled="false"/>
+				<button ref="Digit8" enabled="false"/>
+				<button ref="Digit9" enabled="false"/>
+				<button ref="DigitA" enabled="false"/>
+				<button ref="DigitB" enabled="false"/>
+				<button ref="DigitC" enabled="false"/>
+				<button ref="DigitD" enabled="false"/>
+				<button ref="DigitE" enabled="false"/>
+				<button ref="DigitF" enabled="false"/>
+				<button ref="iModeBin" enabled="false"/>
+				<button ref="iModeDec" enabled="true"/>
+				<button ref="iModeHex" enabled="true"/>
+				<panel ref="BaseButtons" pane="BinButtons"/>
+			</BaseBin>
+
+			<BaseDec>
+				<button ref="Digit0" enabled="true"/>
+				<button ref="Digit1" enabled="true"/>
+				<button ref="Digit2" enabled="true"/>
+				<button ref="Digit3" enabled="true"/>
+				<button ref="Digit4" enabled="true"/>
+				<button ref="Digit5" enabled="true"/>
+				<button ref="Digit6" enabled="true"/>
+				<button ref="Digit7" enabled="true"/>
+				<button ref="Digit8" enabled="true"/>
+				<button ref="Digit9" enabled="true"/>
+				<button ref="DigitA" enabled="false"/>
+				<button ref="DigitB" enabled="false"/>
+				<button ref="DigitC" enabled="false"/>
+				<button ref="DigitD" enabled="false"/>
+				<button ref="DigitE" enabled="false"/>
+				<button ref="DigitF" enabled="false"/>
+				<button ref="iModeBin" enabled="true"/>
+				<button ref="iModeDec" enabled="false"/>
+				<button ref="iModeHex" enabled="true"/>
+				<panel ref="BaseButtons" pane="DecButtons"/>
+			</BaseDec>
+
+			<BaseHex>
+				<button ref="Digit0" enabled="true"/>
+				<button ref="Digit1" enabled="true"/>
+				<button ref="Digit2" enabled="true"/>
+				<button ref="Digit3" enabled="true"/>
+				<button ref="Digit4" enabled="true"/>
+				<button ref="Digit5" enabled="true"/>
+				<button ref="Digit6" enabled="true"/>
+				<button ref="Digit7" enabled="true"/>
+				<button ref="Digit8" enabled="true"/>
+				<button ref="Digit9" enabled="true"/>
+				<button ref="DigitA" enabled="true"/>
+				<button ref="DigitB" enabled="true"/>
+				<button ref="DigitC" enabled="true"/>
+				<button ref="DigitD" enabled="true"/>
+				<button ref="DigitE" enabled="true"/>
+				<button ref="DigitF" enabled="true"/>
+				<button ref="iModeBin" enabled="true"/>
+				<button ref="iModeDec" enabled="true"/>
+				<button ref="iModeHex" enabled="false"/>
+				<panel ref="BaseButtons" pane="HexButtons"/>
+			</BaseHex>
+
+			<BaseByte>
+				<button ref="ModeByte" enabled="false"/>
+				<button ref="ModeWord" enabled="true"/>
+				<button ref="ModeDword" enabled="true"/>
+				<button ref="ModeQword" enabled="true"/>
+				<panel ref="BinButtons" pane="Bin8"/>
+				<panel ref="DecButtons" pane="Dec8"/>
+				<panel ref="HexButtons" pane="Hex8"/>
+				<panel ref="IntButtons" pane="Int8"/>
+			</BaseByte>
+
+			<BaseWord>
+				<button ref="ModeByte" enabled="true"/>
+				<button ref="ModeWord" enabled="false"/>
+				<button ref="ModeDword" enabled="true"/>
+				<button ref="ModeQword" enabled="true"/>
+				<panel ref="BinButtons" pane="Bin16"/>
+				<panel ref="DecButtons" pane="Dec16"/>
+				<panel ref="HexButtons" pane="Hex16"/>
+				<panel ref="IntButtons" pane="Int16"/>
+			</BaseWord>
+
+			<BaseDword>
+				<button ref="ModeByte" enabled="true"/>
+				<button ref="ModeWord" enabled="true"/>
+				<button ref="ModeDword" enabled="false"/>
+				<button ref="ModeQword" enabled="true"/>
+				<panel ref="BinButtons" pane="Bin32"/>
+				<panel ref="DecButtons" pane="Dec32"/>
+				<panel ref="HexButtons" pane="Hex32"/>
+				<panel ref="IntButtons" pane="Int32"/>
+			</BaseDword>
+
+			<BaseQword>
+				<button ref="ModeByte" enabled="true"/>
+				<button ref="ModeWord" enabled="true"/>
+				<button ref="ModeDword" enabled="true"/>
+				<button ref="ModeQword" enabled="false"/>
+				<panel ref="BinButtons" pane="Bin64"/>
+				<panel ref="DecButtons" pane="Dec64"/>
+				<panel ref="HexButtons" pane="Hex64"/>
+				<panel ref="IntButtons" pane="Int64"/>
+			</BaseQword>
+
+			<button ref="iModeSci" event="click">
+				<panel ref="ScientificToolbars" pane ="modePg2"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="true"/>
+			</button>
+
+			<button ref="ModeBin" event="click">
+				<panel ref="IntegerToolbars" pane="iModePg1"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+			</button>
+
+			<button ref="ModeDec" event="click">
+				<panel ref="IntegerToolbars" pane="iModePg1"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+			</button>
+
+			<button ref="ModeHex" event="click">
+				<panel ref="IntegerToolbars" pane="iModePg1"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+			</button>
+		</region>
+
+		<!-- Switch toolbars based on scientific/based-integer mode -->
+		<region>
+			<panel ref="ScientificToolbars" event="changed">
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="ScientificToolbars" event="nochange">
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="toggle"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="SharedToolbars" event="changed">
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="SharedToolbars" event="nochange">
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="toggle"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="IntegerToolbars" event="changed">
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+
+			<panel ref="IntegerToolbars" event="nochange">
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="toggle"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<stack selected="false"/>
+			</panel>
+		</region>
+
+		<!-- Statistics related behavior -->
+		<region>
+			<button ref="StatButton" event="click">
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="StatisticsToolbars" expanded="true"/>
+				<panel ref="StatisticsToolbars" pane="statMain"/>
+			</button>
+
+			<button ref="ExitStatButton" event="click">
+				<foldaway ref="ToolbarFoldaway" pane="StatisticsToolbars" expanded="false"/>
+			</button>
+
+			<button ref="RegressionMacroButton" event="click">
+				<panel ref="Normal-MacroPanel" pane="MacroPane"/>
+			</button>
+		</region>
+
+		<!-- Macro related behavior -->
+		<region>
+			<button ref="ShowEditButton" event="click">
+				<panel ref="MacroEditPanel" pane="EditToolbar"/>
+			</button>
+
+			<button ref="ShowMacroButton" event="click">
+				<panel ref="MacroEditPanel" pane="MacroToolbar"/>
+			</button>
+
+			<EnterMacroMode>
+				<panel ref="Normal-MacroPanel" pane="MacroPane"/>
+			</EnterMacroMode>
+
+			<ExitMacroMode>
+				<panel ref="Normal-MacroPanel" pane="NormalPane"/>
+			</ExitMacroMode>
+
+			<SplitAvailable>
+				<button ref="SplitButton" enabled="true"/>
+			</SplitAvailable>
+
+			<SplitUnavailable>
+				<button ref="SplitButton" enabled="false"/>
+			</SplitUnavailable>
+
+			<ZoomAvailable>
+				<button ref="ZoomButton" enabled="true"/>
+				<button ref="EditZoomButton" enabled="true"/>
+			</ZoomAvailable>
+
+			<ZoomUnavailable>
+				<button ref="ZoomButton" enabled="false"/>
+				<button ref="EditZoomButton" enabled="false"/>
+			</ZoomUnavailable>
+
+			<MacroNoDecimal>
+				<panel ref="MacroDecimalEEPanel" pane="MacroDecimalButton"/>
+			</MacroNoDecimal>
+			<MacroHasDecimal>
+				<panel ref="MacroDecimalEEPanel" pane="MacroEEButton"/>
+			</MacroHasDecimal>
+			<MacroHasEE>
+				<panel ref="MacroDecimalEEPanel" pane="MacroDisabledDecimal"/>
+			</MacroHasEE>
+
+			<MacroScientific>
+				<panel ref="MacroButtons" pane="ScientificMacroButtons"/>
+				<button ref="MacroDecimalButton" enabled="true"/>
+			</MacroScientific>
+
+			<MacroInteger>
+				<panel ref="MacroButtons" pane="IntegerMacroButtons"/>
+				<button ref="MacroDecimalButton" enabled="false"/>
+			</MacroInteger>
+
+			<MacroBin>
+				<button ref="MacroDigit0" enabled="true"/>
+				<button ref="MacroDigit1" enabled="true"/>
+				<button ref="MacroDigit2" enabled="false"/>
+				<button ref="MacroDigit3" enabled="false"/>
+				<button ref="MacroDigit4" enabled="false"/>
+				<button ref="MacroDigit5" enabled="false"/>
+				<button ref="MacroDigit6" enabled="false"/>
+				<button ref="MacroDigit7" enabled="false"/>
+				<button ref="MacroDigit8" enabled="false"/>
+				<button ref="MacroDigit9" enabled="false"/>
+				<button ref="MacroDigitA" enabled="false"/>
+				<button ref="MacroDigitB" enabled="false"/>
+				<button ref="MacroDigitC" enabled="false"/>
+				<button ref="MacroDigitD" enabled="false"/>
+				<button ref="MacroDigitE" enabled="false"/>
+				<button ref="MacroDigitF" enabled="false"/>
+				<panel ref="MacroBaseButtons" pane="MacroBinButtons"/>
+			</MacroBin>
+
+			<MacroDec>
+				<button ref="MacroDigit0" enabled="true"/>
+				<button ref="MacroDigit1" enabled="true"/>
+				<button ref="MacroDigit2" enabled="true"/>
+				<button ref="MacroDigit3" enabled="true"/>
+				<button ref="MacroDigit4" enabled="true"/>
+				<button ref="MacroDigit5" enabled="true"/>
+				<button ref="MacroDigit6" enabled="true"/>
+				<button ref="MacroDigit7" enabled="true"/>
+				<button ref="MacroDigit8" enabled="true"/>
+				<button ref="MacroDigit9" enabled="true"/>
+				<button ref="MacroDigitA" enabled="false"/>
+				<button ref="MacroDigitB" enabled="false"/>
+				<button ref="MacroDigitC" enabled="false"/>
+				<button ref="MacroDigitD" enabled="false"/>
+				<button ref="MacroDigitE" enabled="false"/>
+				<button ref="MacroDigitF" enabled="false"/>
+				<panel ref="MacroBaseButtons" pane="MacroDecButtons"/>
+			</MacroDec>
+
+			<MacroHex>
+				<button ref="MacroDigit0" enabled="true"/>
+				<button ref="MacroDigit1" enabled="true"/>
+				<button ref="MacroDigit2" enabled="true"/>
+				<button ref="MacroDigit3" enabled="true"/>
+				<button ref="MacroDigit4" enabled="true"/>
+				<button ref="MacroDigit5" enabled="true"/>
+				<button ref="MacroDigit6" enabled="true"/>
+				<button ref="MacroDigit7" enabled="true"/>
+				<button ref="MacroDigit8" enabled="true"/>
+				<button ref="MacroDigit9" enabled="true"/>
+				<button ref="MacroDigitA" enabled="true"/>
+				<button ref="MacroDigitB" enabled="true"/>
+				<button ref="MacroDigitC" enabled="true"/>
+				<button ref="MacroDigitD" enabled="true"/>
+				<button ref="MacroDigitE" enabled="true"/>
+				<button ref="MacroDigitF" enabled="true"/>
+				<panel ref="MacroBaseButtons" pane="MacroHexButtons"/>
+			</MacroHex>
+
+			<MacroByte>
+				<panel ref="MacroBinButtons" pane="MacroBin8"/>
+				<panel ref="MacroDecButtons" pane="MacroDec8"/>
+				<panel ref="MacroHexButtons" pane="MacroHex8"/>
+			</MacroByte>
+
+			<MacroWord>
+				<panel ref="MacroBinButtons" pane="MacroBin16"/>
+				<panel ref="MacroDecButtons" pane="MacroDec16"/>
+				<panel ref="MacroHexButtons" pane="MacroHex16"/>
+			</MacroWord>
+
+			<MacroDword>
+				<panel ref="MacroBinButtons" pane="MacroBin32"/>
+				<panel ref="MacroDecButtons" pane="MacroDec32"/>
+				<panel ref="MacroHexButtons" pane="MacroHex32"/>
+			</MacroDword>
+
+			<MacroQword>
+				<panel ref="MacroBinButtons" pane="MacroBin64"/>
+				<panel ref="MacroDecButtons" pane="MacroDec64"/>
+				<panel ref="MacroHexButtons" pane="MacroHex64"/>
+			</MacroQword>
+		</region>
+
+		<!-- Everything for keeping modePg1 buttons sycronized with the stack mode -->
+		<region>
+			<DispChanged>
+				<stack action="StackBox.ApplyDispToSelected"/>
+			</DispChanged>
+			<DispPerfect>
+				<panel ref="ExactApprox" pane="ExactButton"/>
+			</DispPerfect>
+			<DispApprox>
+				<panel ref="ExactApprox" pane="ApproxButton"/>
+			</DispApprox>
+			<DispAuto>
+				<panel ref="SciEngAuto" pane="Auto"/>
+			</DispAuto>
+			<DispSci>
+				<panel ref="SciEngAuto" pane="Sci"/>
+			</DispSci>
+			<DispEng>
+				<panel ref="SciEngAuto" pane="Eng"/>
+			</DispEng>
+			<DispFloat>
+				<panel ref="FloatFix" pane="Float"/>
+			</DispFloat>
+			<DispFix>
+				<panel ref="FloatFix" pane="Fix"/>
+			</DispFix>
+
+			<DispSigFig0>
+				<panel ref="SigFig" pane="Dig0"/>
+			</DispSigFig0>
+			<DispSigFig1>
+				<panel ref="SigFig" pane="Dig1"/>
+			</DispSigFig1>
+			<DispSigFig2>
+				<panel ref="SigFig" pane="Dig2"/>
+			</DispSigFig2>
+			<DispSigFig3>
+				<panel ref="SigFig" pane="Dig3"/>
+			</DispSigFig3>
+			<DispSigFig4>
+				<panel ref="SigFig" pane="Dig4"/>
+			</DispSigFig4>
+			<DispSigFig5>
+				<panel ref="SigFig" pane="Dig5"/>
+			</DispSigFig5>
+			<DispSigFig6>
+				<panel ref="SigFig" pane="Dig6"/>
+			</DispSigFig6>
+			<DispSigFig7>
+				<panel ref="SigFig" pane="Dig7"/>
+			</DispSigFig7>
+			<DispSigFig8>
+				<panel ref="SigFig" pane="Dig8"/>
+			</DispSigFig8>
+			<DispSigFig9>
+				<panel ref="SigFig" pane="Dig9"/>
+			</DispSigFig9>
+			<DispSigFig10>
+				<panel ref="SigFig" pane="Dig10"/>
+			</DispSigFig10>
+			<DispSigFig11>
+				<panel ref="SigFig" pane="Dig11"/>
+			</DispSigFig11>
+			<DispSigFig12>
+				<panel ref="SigFig" pane="Dig12"/>
+			</DispSigFig12>
+			<DispSigFig13>
+				<panel ref="SigFig" pane="Dig13"/>
+			</DispSigFig13>
+			<DispSigFig14>
+				<panel ref="SigFig" pane="Dig14"/>
+			</DispSigFig14>
+			<DispSigFig15>
+				<panel ref="SigFig" pane="Dig15"/>
+			</DispSigFig15>
+		</region>
+	</behavior>
+</root>
