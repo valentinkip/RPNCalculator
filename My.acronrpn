@@ -584,7 +584,7 @@
 					<!-- Scientific keyboard -->
 					<array ID="ScientificStaticButtons" alignment="vertical">
 						<array alignment="horizontal" style="FunctionButtonStyle">
-							<button label="math" style="MenuButtonStyle" activatePane="mathPg1" onPanel="ScientificToolbars" longPressAction="MathFactor.Action"/>
+							<button label="mode" activatePane="mode" onPanel="ScientificToolbarsDouble" style="MenuButtonStyle" longPressAction="StackBox.ModeToggleScientific"/>
 							<button label="sin" activatePane="sinPg1" onPanel="ScientificToolbars" longPressAction="MathLn.Action"/>
 							<button label="cos" activatePane="cosPg1" onPanel="ScientificToolbars" longPressAction="MathExp.Action"/>
 							<button label="tan" activatePane="tanPg1" onPanel="ScientificToolbars" longPressAction="MathPercent.Action"/>
@@ -592,11 +592,11 @@
 						</array>
 
 						<array alignment="horizontal" style="FunctionButtonStyle">
-							<button label="mode" activatePane="mode" onPanel="ScientificToolbarsDouble" style="MenuButtonStyle" longPressAction="StackBox.ModeToggleScientific"/>
 							<button label="log" activatePane="logPg1" onPanel="ScientificToolbars" longPressAction="MathLog.Action"/>
 							<button label="y" superscript="x" activatePane="powerRoot" onPanel="ScientificToolbars" longPressAction="Math10x.Action"/>
 							<button label="x!" activatePane="prob" onPanel="ScientificToolbars" longPressAction="MathFactorial.Action"/>
 							<button label="π" activatePane="pi" onPanel="ScientificToolbarsDouble" longPressAction="MathPI.Action"/>
+							<button label="math" style="MenuButtonStyle" activatePane="mathPg1" onPanel="ScientificToolbars" longPressAction="MathFactor.Action"/>
 						</array>
 
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
@@ -784,18 +784,18 @@
 					<panel ID="MacroButtons">
 						<array ID="ScientificMacroButtons" alignment="vertical">
 							<array alignment="horizontal" style="FunctionButtonStyle">
-								<button label="math" style="MenuButtonStyle" enabled="false"/>
+								<button label="mode" style="MenuButtonStyle" enabled="false"/>
 								<button label="sin" enabled="false"/>
 								<button label="cos" enabled="false"/>
 								<button label="tan" enabled="false"/>
 								<button label="stack" style="MenuButtonStyle" enabled="false"/>
 							</array>
 							<array alignment="horizontal" style="FunctionButtonStyle">
-								<button label="mode" style="MenuButtonStyle" enabled="false"/>
 								<button label="log" enabled="false"/>
 								<button label="y" superscript="x" enabled="false"/>
 								<button label="x!" enabled="false"/>
 								<button label="π" enabled="false"/>
+								<button label="math" style="MenuButtonStyle" enabled="false"/>
 							</array>
 						</array>
 						<array ID="IntegerMacroButtons" alignment="vertical">
