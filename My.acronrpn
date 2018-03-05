@@ -613,7 +613,7 @@
 							<button label="6" action="StackBox.Digit6"/>
 							<button action="MathSubtract.Action" longPressAction="MathSqrt.Action" style="OperatorButtonWithLongPressStyle">
 								<array alignment="vertical" style="OperatorButtonWithLongPress.ArrayStyle">
-									<label label="-" size="0.75"/>
+									<label label="−" size="0.75"/>
 									<array alignment="horizontal" size="0.25" style="LongPressActionStyle">
 										<label label="" size="0.65"/>
 										<label label="&#8730;x" size="0.2"/>
