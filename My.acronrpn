@@ -456,6 +456,24 @@
 							<button label="&#x279D; r∠θ" action="MathToMagnitudePhase.Action" longPressAction="MathToMagnitudePhaseD.Action" pageFoldover="true"/>
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="piPg1" onPanel="ScientificToolbars"/>
 						</array>
+
+						<array ID="convPg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button ID="inchToCm.Button" constant_multiply="inchToCm" label="in⇒cm" pageFoldover="true"/>
+							<button ID="ftToM.Button" constant_multiply="ftToM" label="ft⇒m" pageFoldover="true"/>
+							<button ID="ydToM.Button" constant_multiply="ydToM" label="yd⇒m" pageFoldover="true"/>
+							<button ID="miToKm.Button" constant_multiply="miToKm" label="mi⇒km" pageFoldover="true"/>
+							<button label="Pg 1/2 &#x25B7;" activatePane="convPg2" onPanel="ScientificToolbars"/>
+						</array>
+						<array ID="convPg2" alignment="horizontal" style="ToolbarButtonStyle1NI">
+							<button ID="nmToKm.Button" constant_multiply="nmToKm" label="nm⇒km" pageFoldover="true"/>
+							<button ID="galToL.Button" constant_multiply="galToL" label="gal⇒L" pageFoldover="true"/>
+<!--
+							<button ID="butAcreToM2" constant_multiply="convAcreToM2" label="acre⇒m" superscript="2" pageFoldover="true"/>
+-->
+							<button ID="ozToG.Button" constant_multiply="ozToG" label="oz⇒g" pageFoldover="true"/>
+							<button ID="lbToKg.Button" constant_multiply="lbToKg" label="lb⇒kg" pageFoldover="true"/>
+							<button label="&#x25C1; Pg 2/2" activatePane="convPg1" onPanel="ScientificToolbars"/>
+						</array>
 					</panel>
 
 					<panel ID="SharedToolbars" style="ToolbarButtonStyle1NI" size="0.1">
@@ -647,7 +665,16 @@
 							</panel>
 							<button label="±" action="MathNegation.Action" longPressAction="MathDivInvert.Action"/>
 							<button label="&#8679;" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="ControlButtonStyle"/>
-							<button label="%" action="MathPercent.Action" style="OperatorButtonStyle"/>
+							<button ID="PercentButton" action="MathPercent.Action" style="OperatorButtonWithLongPressStyle">
+								<array alignment="vertical" style="OperatorButtonWithLongPress.ArrayStyle">
+									<label label="%" size="0.75"/>
+									<array alignment="horizontal" size="0.25" style="LongPressActionStyle">
+										<label label="" size="0.65"/>
+										<label label="&#8660;" size="0.2"/>
+										<label label="" size="0.15"/>
+									</array>
+								</array>
+							</button>
 						</array>
 					</array>
 
@@ -1299,5 +1326,76 @@
 				<panel ref="SigFig" pane="Dig15"/>
 			</DispSigFig15>
 		</region>
+
+		<!-- Unit Conversions -->
+		<region>
+			<button ref="PercentButton" event="longPress">
+				<panel ref="ScientificToolbars" pane="convPg1"/>
+			</button>
+
+			<button ref="inchToCm.Button" event="longPress">
+				<constant_inverse ref="inchToCm" label="cm⇒in"/>
+			</button>
+
+			<button ref="ftToM.Button" event="longPress">
+				<constant_inverse ref="ftToM" label="m⇒ft"/>
+			</button>
+
+			<button ref="ydToM.Button" event="longPress">
+				<constant_inverse ref="ydToM" label="m⇒yd"/>
+			</button>
+
+			<button ref="miToKm.Button" event="longPress">
+				<constant_inverse ref="miToKm" label="km⇒mi"/>
+			</button>
+
+			<button ref="nmToKm.Button" event="longPress">
+				<constant_inverse ref="nmToKm" label="km⇒nm"/>
+			</button>
+
+			<button ref="galToL.Button" event="longPress">
+				<constant_inverse ref="galToL" label="L⇒gal"/>
+			</button>
+
+<!--
+			<button ref="butAcreToM2" event="longPress">
+				<constant_inverse ref="convAcreToM2" label="m" superscript="2" parameter="⇒acre"/>
+			</button>
+-->
+
+			<button ref="ozToG.Button" event="longPress">
+				<constant_inverse ref="ozToG" label="g⇒oz"/>
+			</button>
+
+			<button ref="lbToKg.Button" event="longPress">
+				<constant_inverse ref="lbToKg" label="kg⇒lb"/>
+			</button>
+		</region>
 	</behavior>
+
+	<values>
+		<!-- Unit Conversions -->
+		<region>
+<!--
+			<constant ID="convDegToRad" label="deg⇒rad">
+				<MathDivide>
+					<MathPI/>
+					<MathAtom integer="180"/>
+				</MathDivide>
+			</constant>
+-->
+
+			<constant ID="inchToCm" label="in⇒cm" approximate="2.54"/>
+			<constant ID="ftToM" label="ft⇒m" approximate="0.3048"/>
+			<constant ID="ydToM" label="yd⇒m" approximate="0.9144"/>
+			<constant ID="miToKm" label="mi⇒km" approximate="1.609344"/>
+			<constant ID="nmToKm" label="nm⇒km" approximate="1.852"/>
+			<constant ID="galToL" label="gal⇒L" approximate="3.785411784"/>
+<!--
+			<constant ID="convAcreToM2" label="acre⇒m" superscript="2" approximate="4046.856422"/>
+-->
+			<constant ID="ozToG" label="oz⇒g" approximate="28.34952313"/>
+			<constant ID="lbToKg" label="lb⇒kg" approximate="0.45359237"/>
+		</region>
+	</values>
 </root>
