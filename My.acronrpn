@@ -161,10 +161,11 @@
 			<normalFont ref="NormalFont" style="regular" size="8"/>
 		</style>
 
-		<style ID="HexButtonStyle" ref="MenuButtonStyle">
+		<style ID="HexButtonStyle" ref="NumberButtonStyle" padding="0">
 			<forePen size="1.0">
 				<color ref="NumberButtonForegroundColor"/>
 			</forePen>
+            <scale/>
 		</style>
 
 		<style ID="ToolbarButtonStyle1" ref="FunctionButtonStyle">
@@ -716,7 +717,7 @@
 							<button label="" enabled="false"/>
 						</array>
 
-						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+						<array alignment="horizontal" style="HexButtonStyle">
 							<button ID="Digit7" label="7" action="StackBox.Digit7"/>
 							<button ID="Digit8" label="8" action="StackBox.Digit8"/>
 							<button ID="Digit9" label="9" action="StackBox.Digit9"/>
@@ -724,7 +725,7 @@
 							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ControlButtonStyle"/>
 						</array>
 
-						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+						<array alignment="horizontal" style="HexButtonStyle">
 							<button ID="Digit4" label="4" action="StackBox.Digit4"/>
 							<button ID="Digit5" label="5" action="StackBox.Digit5"/>
 							<button ID="Digit6" label="6" action="StackBox.Digit6" longPressAction="StackBox.ModeHex" enableLongPressWhileDisabled="true"/>
@@ -732,7 +733,7 @@
 							<button label="÷" action="MathDivide.Action" longPressAction="MathRShift.Action" style="OperatorButtonStyle"/>
 						</array>
 
-						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+						<array alignment="horizontal" style="HexButtonStyle">
 							<button ID="Digit1" label="1" action="StackBox.Digit1"/>
 							<button ID="Digit2" label="2" action="StackBox.Digit2" longPressAction="StackBox.ModeBin" enableLongPressWhileDisabled="true"/>
 							<button ID="Digit3" label="3" action="StackBox.Digit3"/>
@@ -740,7 +741,7 @@
 							<button label="×" action="MathMultiply.Action" longPressAction="MathAnd.Action" style="OperatorButtonStyle"/>
 						</array>
 
-						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
+						<array alignment="horizontal" style="HexButtonStyle">
 							<button ID="Digit0" label="0" action="StackBox.Digit0" longPressAction="StackBox.ModeDec" enableLongPressWhileDisabled="true"/>
 							<button action="StackBox.Decimal" enabled="false"/>
 							<button label="±" action="MathNegation.Action" longPressAction="MathNot.Action"/>
