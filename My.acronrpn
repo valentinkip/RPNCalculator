@@ -521,6 +521,7 @@
 				</foldaway>
 
 				<panel ID="StaticButtons" size="0.45">
+					<!-- Scientific keyboard -->
 					<array ID="ScientificStaticButtons" alignment="vertical">
 						<array alignment="horizontal" style="FunctionButtonStyle">
 							<button label="math" style="MenuButtonStyle" activatePane="mathPg1" onPanel="ScientificToolbars" longPressAction="MathFactor.Action"/>
@@ -529,6 +530,7 @@
 							<button label="tan" activatePane="tanPg1" onPanel="ScientificToolbars" longPressAction="MathPercent.Action"/>
 							<button label="stack" activatePane="stackPg1" onPanel="SharedToolbars" longPressAction="StackBox.Swap2" style="MenuButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="FunctionButtonStyle">
 							<button label="mode" activatePane="modePg1" onPanel="ScientificToolbars" style="MenuButtonStyle" longPressAction="StackBox.ModeToggleScientific"/>
 							<button label="log" activatePane="logPg1" onPanel="ScientificToolbars" longPressAction="MathLog.Action"/>
@@ -536,6 +538,7 @@
 							<button label="x!" activatePane="prob" onPanel="ScientificToolbars" longPressAction="MathFactorial.Action"/>
 							<button label="π" activatePane="piPg1" onPanel="ScientificToolbars" longPressAction="MathPI.Action"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button label="7" action="StackBox.Digit7"/>
 							<button label="8" action="StackBox.Digit8"/>
@@ -543,6 +546,7 @@
 							<button label="&#10554;" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ClearButtonStyle"/>
 							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ClearButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button label="4" action="StackBox.Digit4"/>
 							<button label="5" action="StackBox.Digit5"/>
@@ -550,6 +554,7 @@
 							<button label="−" action="MathSubtract.Action" longPressAction="MathSqrt.Action" style="OperatorButtonStyle"/>
 							<button label="÷" action="MathDivide.Action" longPressAction="MathNRoot.Action" style="OperatorButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button label="1" action="StackBox.Digit1" longPressAction="MathI.Action"/>
 							<button label="2" action="StackBox.Digit2"/>
@@ -557,6 +562,7 @@
 							<button label="+" action="MathAdd.Action" longPressAction="MathSquare.Action" style="OperatorButtonStyle"/>
 							<button label="×" action="MathMultiply.Action" longPressAction="MathPower.Action" style="OperatorButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button label="0" action="StackBox.Digit0" longPressAction="MathI.Action2"/>
 							<panel ID="DecimalEEPanel">
@@ -577,6 +583,7 @@
 							<button label="math" style="MenuButtonStyle" activatePane="iMathPg1" onPanel="IntegerToolbars"/>
 							<button label="stack" activatePane="stackPg1" onPanel="SharedToolbars" longPressAction="StackBox.Swap2" style="MenuButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="HexButtonStyle">
 							<button ID="DigitA" label="A" action="StackBox.DigitA"/>
 							<button ID="DigitB" label="B" action="StackBox.DigitB"/>
@@ -603,6 +610,7 @@
 							</panel>
 							<button label="" enabled="false"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button ID="Digit7" label="7" action="StackBox.Digit7"/>
 							<button ID="Digit8" label="8" action="StackBox.Digit8"/>
@@ -610,6 +618,7 @@
 							<button label="&#10554;" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ClearButtonStyle"/>
 							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ClearButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button ID="Digit4" label="4" action="StackBox.Digit4"/>
 							<button ID="Digit5" label="5" action="StackBox.Digit5"/>
@@ -617,6 +626,7 @@
 							<button label="−" action="MathSubtract.Action" longPressAction="MathXor.Action" style="OperatorButtonStyle"/>
 							<button label="÷" action="MathDivide.Action" longPressAction="MathRShift.Action" style="OperatorButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button ID="Digit1" label="1" action="StackBox.Digit1"/>
 							<button ID="Digit2" label="2" action="StackBox.Digit2" longPressAction="StackBox.ModeBin" enableLongPressWhileDisabled="true"/>
@@ -624,6 +634,7 @@
 							<button label="+" action="MathAdd.Action" longPressAction="MathOr.Action" style="OperatorButtonStyle"/>
 							<button label="×" action="MathMultiply.Action" longPressAction="MathAnd.Action" style="OperatorButtonStyle"/>
 						</array>
+
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
 							<button ID="Digit0" label="0" action="StackBox.Digit0" longPressAction="StackBox.ModeDec" enableLongPressWhileDisabled="true"/>
 							<button action="StackBox.Decimal" enabled="false"/>
@@ -633,7 +644,6 @@
 						</array>
 					</array>
 				</panel>
-
 			</array>
 			<array ID="MacroPane" alignment="vertical">
 				<macro
