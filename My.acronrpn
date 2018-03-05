@@ -90,11 +90,8 @@
 		<scale ID="ToolbarButtonScale3" max="ToolbarButtonScale2"/>
 
 		<!-- Styles -->
-		<style ID="NumberButtonStyle" padding="5.0">
+		<style ID="BaseButtonStyle" padding="5.0">
 			<normalFont ref="StaticButtonFont"/>
-			<forePen size="1.0">
-				<color ref="NumberButtonForegroundColor"/>
-			</forePen>
 			<backBrush>
 				<color ref="StaticButtonBackgroundColor"/>
 			</backBrush>
@@ -102,14 +99,23 @@
 				<color ref="StaticButtonBorderColor"/>
 			</borderPen>
 			<highlightBrush ref="HighlightBrush"/>
+			<forePen size="1.0">
+				<color ref="Clear"/>
+			</forePen>
 			<scale/>
+		</style>
+
+		<style ID="NumberButtonStyle" ref="BaseButtonStyle">
+			<forePen size="1.0">
+				<color ref="NumberButtonForegroundColor"/>
+			</forePen>
 		</style>
 
 		<style ID="EEButtonStyle" ref="NumberButtonStyle" padding="10.0">
 			<scale/>
 		</style>
 
-		<style ID="OperatorButtonStyle" ref="NumberButtonStyle">
+		<style ID="OperatorButtonStyle" ref="BaseButtonStyle">
 			<forePen size="1.0">
 				<color ref="OperatorButtonForegroundColor"/>
 			</forePen>
@@ -124,7 +130,7 @@
 			</backBrush>
 		</style>
 
-		<style ID="LongPressActionStyle" ref="NumberButtonStyle" padding="0">
+		<style ID="LongPressActionStyle" ref="BaseButtonStyle" padding="0">
 			<forePen size="1.0">
 				<color ref="LongPressActionForegroundColor"/>
 			</forePen>
@@ -144,7 +150,7 @@
 			<scale/>
 		</style>
 
-		<style ID="FunctionButtonStyle" ref="NumberButtonStyle" padding="2.0">
+		<style ID="FunctionButtonStyle" ref="BaseButtonStyle" padding="2.0">
 			<forePen size="1.0">
 				<color ref="FunctionButtonForegroundColor"/>
 			</forePen>
@@ -196,7 +202,7 @@
 			<normalFont ref="ToolbarRFont"/>
 		</style>
 
-		<style ID="ClearButtonStyle" ref="NumberButtonStyle">
+		<style ID="ClearButtonStyle" ref="BaseButtonStyle">
 			<forePen size="1.0">
 				<color ref="ClearButtonForegroundColor"/>
 			</forePen>
