@@ -130,6 +130,15 @@
 			</backBrush>
 		</style>
 
+		<style ID="NumberButtonWithLongPressStyle" ref="NumberButtonStyle" padding="0">
+		</style>
+
+		<style ID="NumberButtonWithLongPress.ArrayStyle" ref="NumberButtonStyle" padding="0">
+			<backBrush>
+				<color ref="Clear"/>
+			</backBrush>
+		</style>
+
 		<style ID="LongPressActionStyle" ref="BaseButtonStyle" padding="0">
 			<forePen size="1.0">
 				<color ref="LongPressActionForegroundColor"/>
