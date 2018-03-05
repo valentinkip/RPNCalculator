@@ -25,7 +25,7 @@
 		<color ID="ToolbarButtonForegroundColor" ref="Black"/>
 		<color ID="ToolbarButtonBackgroundColor" ref="LightGray"/>
 		<color ID="ToolbarButtonBorderColor" ref="Silver"/>
-		<color ID="ClearButtonForegroundColor" ref="Pink"/>
+		<color ID="ControlButtonForegroundColor" ref="Pink"/>
 		<color ID="ConsoleForegroundColor" ref="Black"/>
 		<color ID="ConsoleBackgroundColor" ref="White"/>
 		<color ID="EquationForegroundColor" ref="Black"/>
@@ -149,16 +149,6 @@
 			<scale/>
 		</style>
 
-		<style ID="EnterButtonStyle" ref="OperatorButtonStyle" padding="0.0">
-			<backBrush>
-				<color ref="StaticButtonBackgroundColor"/>
-			</backBrush>
-			<forePen size="1.0">
-				<color ref="ClearButtonForegroundColor"/>
-			</forePen>
-			<scale/>
-		</style>
-
 		<style ID="FunctionButtonStyle" ref="BaseButtonStyle" padding="2.0">
 			<forePen size="1.0">
 				<color ref="FunctionButtonForegroundColor"/>
@@ -211,9 +201,9 @@
 			<normalFont ref="ToolbarRFont"/>
 		</style>
 
-		<style ID="ClearButtonStyle" ref="BaseButtonStyle">
+		<style ID="ControlButtonStyle" ref="BaseButtonStyle">
 			<forePen size="1.0">
-				<color ref="ClearButtonForegroundColor"/>
+				<color ref="ControlButtonForegroundColor"/>
 			</forePen>
 		</style>
 
@@ -578,8 +568,8 @@
 							<button label="7" action="StackBox.Digit7"/>
 							<button label="8" action="StackBox.Digit8"/>
 							<button label="9" action="StackBox.Digit9"/>
-							<button label="&#10554;" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ClearButtonStyle"/>
-							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ClearButtonStyle"/>
+							<button label="&#10554;" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ControlButtonStyle"/>
+							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ControlButtonStyle"/>
 						</array>
 
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
@@ -642,7 +632,7 @@
 								<button ID="DisabledDecimal" action="StackBox.Decimal" enabled="false"/>
 							</panel>
 							<button label="±" action="MathNegation.Action" longPressAction="MathDivInvert.Action"/>
-							<button label="ENTER" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="EnterButtonStyle"/>
+							<button label="&#8679;" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="ControlButtonStyle"/>
 							<button label="%" action="MathPercent.Action" style="OperatorButtonStyle"/>
 						</array>
 					</array>
@@ -687,8 +677,8 @@
 							<button ID="Digit7" label="7" action="StackBox.Digit7"/>
 							<button ID="Digit8" label="8" action="StackBox.Digit8"/>
 							<button ID="Digit9" label="9" action="StackBox.Digit9"/>
-							<button label="&#10554;" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ClearButtonStyle"/>
-							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ClearButtonStyle"/>
+							<button label="&#10554;" action="StackBox.Explode" longPressAction="MathMemoryStore.LastX" style="ControlButtonStyle"/>
+							<button label="C" action="StackBox.Clear" longPressAction="StackBox.ClearStack" style="ControlButtonStyle"/>
 						</array>
 
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
@@ -711,7 +701,7 @@
 							<button ID="Digit0" label="0" action="StackBox.Digit0" longPressAction="StackBox.ModeDec" enableLongPressWhileDisabled="true"/>
 							<button action="StackBox.Decimal" enabled="false"/>
 							<button label="±" action="MathNegation.Action" longPressAction="MathNot.Action"/>
-							<button label="ENTER" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="EnterButtonStyle"/>
+							<button label="&#8679;" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="ControlButtonStyle"/>
 							<button label="" enabled="false"/>
 						</array>
 					</array>
@@ -804,8 +794,8 @@
 						<button ID="MacroDigit7" label="7" action="MacroBox.Digit7"/>
 						<button ID="MacroDigit8" label="8" action="MacroBox.Digit8"/>
 						<button ID="MacroDigit9" label="9" action="MacroBox.Digit9"/>
-						<button label="&#10554;" action="MacroBox.DiscardMoveBackward" style="ClearButtonStyle"/>
-						<button label="C" action="MacroBox.Clear" longPressAction="MacroBox.Cancel" style="ClearButtonStyle"/>
+						<button label="&#10554;" action="MacroBox.DiscardMoveBackward" style="ControlButtonStyle"/>
+						<button label="C" action="MacroBox.Clear" longPressAction="MacroBox.Cancel" style="ControlButtonStyle"/>
 					</array>
 					<array alignment="horizontal" style="NumberButtonStyle" size="0.16708">
 						<button ID="MacroDigit4" label="4" action="MacroBox.Digit4"/>
@@ -829,7 +819,7 @@
 							<button ID="MacroDisabledDecimal" action="MacroBox.Decimal" enabled="false"/>
 						</panel>
 						<button label="±" action="MacroBox.Negative"/>
-						<button label="ENTER" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="EnterButtonStyle"/>
+						<button label="&#8679;" action="StackBox.Enter" longPressAction="MathMemoryStore.MemoryRecall" style="ControlButtonStyle"/>
 						<button label="%" enabled="false"/>
 					</array>
 				</array>
