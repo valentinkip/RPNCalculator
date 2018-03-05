@@ -357,48 +357,6 @@
 							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="tanPg1" onPanel="ScientificToolbars"/>
 						</array>
 
-						<array ID="modePg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
-							<panel ID="ExactApprox">
-								<button ID="ExactButton" action="StackBox.ModeApprox" label="exact"/>
-								<button ID="ApproxButton" action="StackBox.ModeExact" label="approx"/>
-							</panel>
-							<panel ID="SciEngAuto">
-								<button ID="Auto" label="normal" action="StackBox.ModeSci"/>
-								<button ID="Sci" label="sci" action="StackBox.ModeEng"/>
-								<button ID="Eng" label="eng" action="StackBox.ModeAuto"/>
-							</panel>
-							<panel ID="FloatFix">
-								<button ID="Float" label="float" action="StackBox.ModeFixed"/>
-								<button ID="Fix" label="fix" action="StackBox.ModeFloat"/>
-							</panel>
-							<panel ID="SigFig">
-								<button ID="Dig15" label="15 digits" action="StackBox.ModeSigFig0" longPressAction="StackBox.ModeSigFig0" pageFoldover="true"/>
-								<button ID="Dig0" label="0 digits" action="StackBox.ModeSigFig2" longPressAction="StackBox.ModeSigFig1" pageFoldover="true"/>
-								<button ID="Dig1" label="1 digits" action="StackBox.ModeSigFig2" longPressAction="StackBox.ModeSigFig2" pageFoldover="true"/>
-								<button ID="Dig2" label="2 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig3" pageFoldover="true"/>
-								<button ID="Dig3" label="3 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig4" pageFoldover="true"/>
-								<button ID="Dig4" label="4 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig5" ageFoldover="true"/>
-								<button ID="Dig5" label="5 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig6" pageFoldover="true"/>
-								<button ID="Dig6" label="6 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig7" pageFoldover="true"/>
-								<button ID="Dig7" label="7 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig8" pageFoldover="true"/>
-								<button ID="Dig8" label="8 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig9" pageFoldover="true"/>
-								<button ID="Dig9" label="9 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig10" pageFoldover="true"/>
-								<button ID="Dig10" label="10 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig11" pageFoldover="true"/>
-								<button ID="Dig11" label="11 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig12" pageFoldover="true"/>
-								<button ID="Dig12" label="12 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig13" pageFoldover="true"/>
-								<button ID="Dig13" label="13 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig14" pageFoldover="true"/>
-								<button ID="Dig14" label="14 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig15" pageFoldover="true"/>
-							</panel>
-							<button label="Pg 1/2 &#x25B7;" activatePane="modePg2" onPanel="ScientificToolbars"/>
-						</array>
-						<array ID="modePg2" alignment="horizontal" style="ToolbarButtonStyle1NI">
-							<button label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI" enabled="false"/>
-							<button ID="ModeBin" label="bin" action="StackBox.ModeBin"/>
-							<button ID="ModeDec" label="dec" action="StackBox.ModeDec"/>
-							<button ID="ModeHex" label="hex" action="StackBox.ModeHex"/>
-							<button label="&#x25C1; Pg 2/2" activatePane="modePg1" onPanel="ScientificToolbars"/>
-						</array>
-
 						<array ID="logPg1" alignment="horizontal">
 							<button label="e" superscript="x" action="MathExp.Action"/>
 							<button label="ln" action="MathLn.Action"/>
@@ -441,24 +399,66 @@
 							<button label="P" subscript="(y, x)" action="MathNPR.Action"/>
 							<button label="random" action="MathRandom.Action" style="ToolbarButtonStyle1NI"/>
 						</array>
-
-						<array ID="piPg1" alignment="horizontal">
-							<button label="π" action="MathPI.Action"/>
-							<button label="e" action="MathE.Action"/>
-							<button label="□°□'□&quot;" action="MathDMS.Action" style="ToolbarButtonStyle1NI"/>
-							<button label="&#x279D; dms" action="MathToDMS.Action"/>
-							<button label="Pg 1/2 &#x25B7;" style="ToolbarButtonStyle1NI" activatePane="piPg2" onPanel="ScientificToolbars"/>
-						</array>
-						<array ID="piPg2" alignment="horizontal">
-							<button label="ί" action="MathI.Action"/>
-							<button label="y+xί" action="MathI.Action2"/>
-							<button label="y∠x" action="MathMagnitudePhase.Action" longPressAction="MathMagnitudePhaseD.Action" pageFoldover="true"/>
-							<button label="&#x279D; r∠θ" action="MathToMagnitudePhase.Action" longPressAction="MathToMagnitudePhaseD.Action" pageFoldover="true"/>
-							<button label="&#x25C1; Pg 2/2" style="ToolbarButtonStyle1NI" activatePane="piPg1" onPanel="ScientificToolbars"/>
-						</array>
 					</panel>
 
-					<panel ID="ConversionsToolbar" style="ToolbarButtonStyle1" size="0.2">
+					<panel ID="ScientificToolbarsDouble" style="ToolbarButtonStyle1" size="0.2">
+						<array ID="mode" alignment="vertical" style="ToolbarButtonStyle1NI">
+							<array alignment="horizontal" style="ToolbarButtonStyle1NI">
+								<panel ID="ExactApprox">
+									<button ID="ExactButton" action="StackBox.ModeApprox" label="exact"/>
+									<button ID="ApproxButton" action="StackBox.ModeExact" label="approx"/>
+								</panel>
+								<panel ID="SciEngAuto">
+									<button ID="Auto" label="normal" action="StackBox.ModeSci"/>
+									<button ID="Sci" label="sci" action="StackBox.ModeEng"/>
+									<button ID="Eng" label="eng" action="StackBox.ModeAuto"/>
+								</panel>
+								<panel ID="FloatFix">
+									<button ID="Float" label="float" action="StackBox.ModeFixed"/>
+									<button ID="Fix" label="fix" action="StackBox.ModeFloat"/>
+								</panel>
+								<panel ID="SigFig">
+									<button ID="Dig15" label="15 digits" action="StackBox.ModeSigFig0" longPressAction="StackBox.ModeSigFig0" pageFoldover="true"/>
+									<button ID="Dig0" label="0 digits" action="StackBox.ModeSigFig2" longPressAction="StackBox.ModeSigFig1" pageFoldover="true"/>
+									<button ID="Dig1" label="1 digits" action="StackBox.ModeSigFig2" longPressAction="StackBox.ModeSigFig2" pageFoldover="true"/>
+									<button ID="Dig2" label="2 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig3" pageFoldover="true"/>
+									<button ID="Dig3" label="3 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig4" pageFoldover="true"/>
+									<button ID="Dig4" label="4 digits" action="StackBox.ModeSigFig5" longPressAction="StackBox.ModeSigFig5" ageFoldover="true"/>
+									<button ID="Dig5" label="5 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig6" pageFoldover="true"/>
+									<button ID="Dig6" label="6 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig7" pageFoldover="true"/>
+									<button ID="Dig7" label="7 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig8" pageFoldover="true"/>
+									<button ID="Dig8" label="8 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig9" pageFoldover="true"/>
+									<button ID="Dig9" label="9 digits" action="StackBox.ModeSigFig10" longPressAction="StackBox.ModeSigFig10" pageFoldover="true"/>
+									<button ID="Dig10" label="10 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig11" pageFoldover="true"/>
+									<button ID="Dig11" label="11 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig12" pageFoldover="true"/>
+									<button ID="Dig12" label="12 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig13" pageFoldover="true"/>
+									<button ID="Dig13" label="13 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig14" pageFoldover="true"/>
+									<button ID="Dig14" label="14 digits" action="StackBox.ModeSigFig15" longPressAction="StackBox.ModeSigFig15" pageFoldover="true"/>
+								</panel>
+							</array>
+							<array alignment="horizontal" style="ToolbarButtonStyle1NI">
+								<button label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI" enabled="false"/>
+								<button ID="ModeBin" label="bin" action="StackBox.ModeBin"/>
+								<button ID="ModeDec" label="dec" action="StackBox.ModeDec"/>
+								<button ID="ModeHex" label="hex" action="StackBox.ModeHex"/>
+							</array>
+						</array>
+
+						<array ID="pi" alignment="vertical" style="ToolbarButtonStyle1NI">
+							<array alignment="horizontal">
+								<button label="π" action="MathPI.Action"/>
+								<button label="e" action="MathE.Action"/>
+								<button label="□°□'□&quot;" action="MathDMS.Action" style="ToolbarButtonStyle1NI"/>
+								<button label="&#x279D; dms" action="MathToDMS.Action"/>
+							</array>
+							<array alignment="horizontal">
+								<button label="ί" action="MathI.Action"/>
+								<button label="y+xί" action="MathI.Action2"/>
+								<button label="y∠x" action="MathMagnitudePhase.Action" longPressAction="MathMagnitudePhaseD.Action" pageFoldover="true"/>
+								<button label="&#x279D; r∠θ" action="MathToMagnitudePhase.Action" longPressAction="MathToMagnitudePhaseD.Action" pageFoldover="true"/>
+							</array>
+						</array>
+
 						<array ID="conversions" alignment="vertical" style="ToolbarButtonStyle1NI">
 							<array alignment="horizontal" style="ToolbarButtonStyle1NI" size="0.5">
 								<button ID="inchToCm.Button" constant_multiply="inchToCm" label="in⇒cm" pageFoldover="true"/>
@@ -495,40 +495,40 @@
 						</array>
 					</panel>
 
-					<panel ID="IntegerToolbars" style="ToolbarButtonStyle1" size="0.1">
-						<array ID="iMathPg1" alignment="horizontal">
-							<button label="and" action="MathAnd.Action"/>
-							<button label="or" action="MathOr.Action"/>
-							<button label="not" action="MathNot.Action"/>
-							<button label="xor" action="MathXor.Action"/>
-							<button label="Pg 1/2 &#x25B7;" activatePane="iMathPg2" onPanel="IntegerToolbars" style="ToolbarButtonStyle1NI"/>
-						</array>
-						<array ID="iMathPg2" alignment="horizontal">
-							<button label="mod" action="MathMod.Action"/>
-							<panel ID="IntButtons">
-								<button ID="Int32" label="int" subscript="32" action="MathInt32.Action"/>
-								<button ID="Int8" label="int" subscript="8" action="MathInt8.Action"/>
-								<button ID="Int16" label="int" subscript="16" action="MathInt16.Action"/>
-								<button ID="Int64" label="int" subscript="64" action="MathInt64.Action"/>
-							</panel>
-							<button label="&lt;&lt;" action="MathLShift.Action"/>
-							<button label="&gt;&gt;" action="MathRShift.Action"/>
-							<button label="&#x25C1; Pg 2/2" activatePane="iMathPg1" onPanel="IntegerToolbars" style="ToolbarButtonStyle1NI"/>
+					<panel ID="IntegerToolbars" style="ToolbarButtonStyle1" size="0.2">
+						<array ID="iMath" alignment="vertical" style="ToolbarButtonStyle1NI">
+							<array alignment="horizontal">
+								<button label="and" action="MathAnd.Action"/>
+								<button label="or" action="MathOr.Action"/>
+								<button label="not" action="MathNot.Action"/>
+								<button label="xor" action="MathXor.Action"/>
+							</array>
+							<array alignment="horizontal">
+								<button label="mod" action="MathMod.Action"/>
+								<panel ID="IntButtons">
+									<button ID="Int32" label="int" subscript="32" action="MathInt32.Action"/>
+									<button ID="Int8" label="int" subscript="8" action="MathInt8.Action"/>
+									<button ID="Int16" label="int" subscript="16" action="MathInt16.Action"/>
+									<button ID="Int64" label="int" subscript="64" action="MathInt64.Action"/>
+								</panel>
+								<button label="&lt;&lt;" action="MathLShift.Action"/>
+								<button label="&gt;&gt;" action="MathRShift.Action"/>
+							</array>
 						</array>
 
-						<array ID="iModePg1" alignment="horizontal" style="ToolbarButtonStyle1NI">
-							<button ID="iModeSci" label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI"/>
-							<button ID="iModeBin" label="bin" action="StackBox.ModeBin"/>
-							<button ID="iModeDec" label="dec" action="StackBox.ModeDec"/>
-							<button ID="iModeHex" label="hex" action="StackBox.ModeHex"/>
-							<button label="Pg 1/2 &#x25B7;" activatePane="iModePg2" onPanel="IntegerToolbars"/>
-						</array>
-						<array ID="iModePg2" alignment="horizontal" style="ToolbarButtonStyle1NI">
-							<button ID="ModeByte" label="byte" action="StackBox.ModeByte"/>
-							<button ID="ModeWord" label="word" action="StackBox.ModeWord"/>
-							<button ID="ModeDword" label="dword" action="StackBox.ModeDword"/>
-							<button ID="ModeQword" label="qword" action="StackBox.ModeQword"/>
-							<button label="&#x25C1; Pg 2/2" activatePane="iModePg1" onPanel="IntegerToolbars"/>
+						<array ID="iMode" alignment="vertical" style="ToolbarButtonStyle1NI">
+							<array alignment="horizontal" style="ToolbarButtonStyle1NI">
+								<button ID="iModeSci" label="scientific" action="StackBox.ModeScientific" style="ToolbarButtonStyle2NI"/>
+								<button ID="iModeBin" label="bin" action="StackBox.ModeBin"/>
+								<button ID="iModeDec" label="dec" action="StackBox.ModeDec"/>
+								<button ID="iModeHex" label="hex" action="StackBox.ModeHex"/>
+							</array>
+							<array alignment="horizontal" style="ToolbarButtonStyle1NI">
+								<button ID="ModeByte" label="byte" action="StackBox.ModeByte"/>
+								<button ID="ModeWord" label="word" action="StackBox.ModeWord"/>
+								<button ID="ModeDword" label="dword" action="StackBox.ModeDword"/>
+								<button ID="ModeQword" label="qword" action="StackBox.ModeQword"/>
+							</array>
 						</array>
 					</panel>
 
@@ -591,11 +591,11 @@
 						</array>
 
 						<array alignment="horizontal" style="FunctionButtonStyle">
-							<button label="mode" activatePane="modePg1" onPanel="ScientificToolbars" style="MenuButtonStyle" longPressAction="StackBox.ModeToggleScientific"/>
+							<button label="mode" activatePane="mode" onPanel="ScientificToolbarsDouble" style="MenuButtonStyle" longPressAction="StackBox.ModeToggleScientific"/>
 							<button label="log" activatePane="logPg1" onPanel="ScientificToolbars" longPressAction="MathLog.Action"/>
 							<button label="y" superscript="x" activatePane="powerRoot" onPanel="ScientificToolbars" longPressAction="Math10x.Action"/>
 							<button label="x!" activatePane="prob" onPanel="ScientificToolbars" longPressAction="MathFactorial.Action"/>
-							<button label="π" activatePane="piPg1" onPanel="ScientificToolbars" longPressAction="MathPI.Action"/>
+							<button label="π" activatePane="pi" onPanel="ScientificToolbarsDouble" longPressAction="MathPI.Action"/>
 						</array>
 
 						<array alignment="horizontal" style="NumberButtonStyle" size="0.1875">
@@ -685,7 +685,7 @@
 							<button ID="DigitD" label="D" action="StackBox.DigitD"/>
 							<button ID="DigitE" label="E" action="StackBox.DigitE"/>
 							<button ID="DigitF" label="F" action="StackBox.DigitF"/>
-							<button label="math" style="MenuButtonStyle" activatePane="iMathPg1" onPanel="IntegerToolbars"/>
+							<button label="math" style="MenuButtonStyle" activatePane="iMath" onPanel="IntegerToolbars"/>
 							<button label="stack" activatePane="stackPg1" onPanel="SharedToolbars" longPressAction="StackBox.Swap2" style="MenuButtonStyle"/>
 						</array>
 
@@ -695,22 +695,22 @@
 							<button ID="DigitC" label="C" action="StackBox.DigitC"/>
 							<panel ID="BaseButtons" style="MenuButtonStyle">
 								<panel ID="BinButtons">
-									<button ID="Bin8" label="bin" subscript="8" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Bin16" label="bin" subscript="16" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Bin32" label="bin" subscript="32" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Bin64" label="bin" subscript="64" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin8" label="bin" subscript="8" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin16" label="bin" subscript="16" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin32" label="bin" subscript="32" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Bin64" label="bin" subscript="64" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
 								</panel>
 								<panel ID="DecButtons">
-									<button ID="Dec8" label="dec" subscript="8" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Dec16" label="dec" subscript="16" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Dec32" label="dec" subscript="32" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Dec64" label="dec" subscript="64" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec8" label="dec" subscript="8" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec16" label="dec" subscript="16" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec32" label="dec" subscript="32" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Dec64" label="dec" subscript="64" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
 								</panel>
 								<panel ID="HexButtons">
-									<button ID="Hex8" label="hex" subscript="8" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Hex16" label="hex" subscript="16" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Hex32" label="hex" subscript="32" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
-									<button ID="Hex64" label="hex" subscript="64" activatePane="iModePg1" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex8" label="hex" subscript="8" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex16" label="hex" subscript="16" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex32" label="hex" subscript="32" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
+									<button ID="Hex64" label="hex" subscript="64" activatePane="iMode" onPanel="IntegerToolbars" longPressAction="StackBox.ModeToggleScientific"/>
 								</panel>
 							</panel>
 							<button label="" enabled="false"/>
@@ -1023,31 +1023,31 @@
 			</BaseQword>
 
 			<button ref="iModeSci" event="click">
-				<panel ref="ScientificToolbars" pane ="modePg2"/>
+				<panel ref="ScientificToolbarsDouble" pane ="mode"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="true"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="true"/>
 			</button>
 
 			<button ref="ModeBin" event="click">
-				<panel ref="IntegerToolbars" pane="iModePg1"/>
+				<panel ref="IntegerToolbars" pane="iMode"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 			</button>
 
 			<button ref="ModeDec" event="click">
-				<panel ref="IntegerToolbars" pane="iModePg1"/>
+				<panel ref="IntegerToolbars" pane="iMode"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 			</button>
 
 			<button ref="ModeHex" event="click">
-				<panel ref="IntegerToolbars" pane="iModePg1"/>
+				<panel ref="IntegerToolbars" pane="iMode"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 			</button>
 		</region>
 
@@ -1055,7 +1055,7 @@
 		<region>
 			<panel ref="ScientificToolbars" event="changed">
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="true"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
@@ -1063,22 +1063,22 @@
 
 			<panel ref="ScientificToolbars" event="nochange">
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="toggle"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
 
-			<panel ref="ConversionsToolbar" event="changed">
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="true"/>
+			<panel ref="ScientificToolbarsDouble" event="changed">
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
 
-			<panel ref="ConversionsToolbar" event="nochange">
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="toggle"/>
+			<panel ref="ScientificToolbarsDouble" event="nochange">
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="toggle"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
@@ -1088,7 +1088,7 @@
 			<panel ref="SharedToolbars" event="changed">
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
@@ -1096,7 +1096,7 @@
 			<panel ref="SharedToolbars" event="nochange">
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="toggle"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
@@ -1105,7 +1105,7 @@
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="true"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
 
@@ -1113,7 +1113,7 @@
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="toggle"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<stack selected="false"/>
 			</panel>
 		</region>
@@ -1122,7 +1122,7 @@
 		<region>
 			<button ref="StatButton" event="click">
 				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbars" expanded="false"/>
-				<foldaway ref="ToolbarFoldaway" pane="ConversionsToolbar" expanded="false"/>
+				<foldaway ref="ToolbarFoldaway" pane="ScientificToolbarsDouble" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="IntegerToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="SharedToolbars" expanded="false"/>
 				<foldaway ref="ToolbarFoldaway" pane="StatisticsToolbars" expanded="true"/>
@@ -1279,7 +1279,7 @@
 			</MacroQword>
 		</region>
 
-		<!-- Everything for keeping modePg1 buttons sycronized with the stack mode -->
+		<!-- Everything for keeping mode buttons sycronized with the stack mode -->
 		<region>
 			<DispChanged>
 				<stack action="StackBox.ApplyDispToSelected"/>
@@ -1359,7 +1359,7 @@
 		<!-- Unit Conversions -->
 		<region>
 			<button ref="PercentButton" event="longPress">
-				<panel ref="ConversionsToolbar" pane="conversions"/>
+				<panel ref="ScientificToolbarsDouble" pane="conversions"/>
 			</button>
 
 			<button ref="inchToCm.Button" event="longPress">
