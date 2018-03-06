@@ -462,6 +462,7 @@
 
 						<array ID="conversions" alignment="vertical" style="ToolbarButtonStyle1NI">
 							<array alignment="horizontal" style="ToolbarButtonStyle1NI" size="0.5">
+								<button ID="degToRad.Button" constant_multiply="degToRad" label="deg⇒rad" pageFoldover="true"/>
 								<button ID="inchToCm.Button" constant_multiply="inchToCm" label="in⇒cm" pageFoldover="true"/>
 								<button ID="ftToM.Button" constant_multiply="ftToM" label="ft⇒m" pageFoldover="true"/>
 								<button ID="ydToM.Button" constant_multiply="ydToM" label="yd⇒m" pageFoldover="true"/>
@@ -681,6 +682,7 @@
 						</array>
 					</array>
 
+					<!-- Integer keyboard -->
 					<array ID="IntegerStaticButtons" alignment="vertical">
 						<array alignment="horizontal" style="HexButtonStyle">
 							<button ID="DigitD" label="D" action="StackBox.DigitD"/>
@@ -1363,6 +1365,10 @@
 				<panel ref="ScientificToolbarsDouble" pane="conversions"/>
 			</button>
 
+			<button ref="degToRad.Button" event="longPress">
+				<constant_inverse ref="degToRad" label="rad⇒deg"/>
+			</button>
+
 			<button ref="inchToCm.Button" event="longPress">
 				<constant_inverse ref="inchToCm" label="cm⇒in"/>
 			</button>
@@ -1406,15 +1412,12 @@
 	<values>
 		<!-- Unit Conversions -->
 		<region>
-<!--
-			<constant ID="convDegToRad" label="deg⇒rad">
+			<constant ID="degToRad" label="deg⇒rad">
 				<MathDivide>
 					<MathPI/>
 					<MathAtom integer="180"/>
 				</MathDivide>
 			</constant>
--->
-
 			<constant ID="inchToCm" label="in⇒cm" approximate="2.54"/>
 			<constant ID="ftToM" label="ft⇒m" approximate="0.3048"/>
 			<constant ID="ydToM" label="yd⇒m" approximate="0.9144"/>
