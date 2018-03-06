@@ -476,6 +476,7 @@
 -->
 								<button ID="ozToG.Button" constant_multiply="ozToG" label="oz⇒g" pageFoldover="true"/>
 								<button ID="lbToKg.Button" constant_multiply="lbToKg" label="lb⇒kg" pageFoldover="true"/>
+								<button ID="fToC.Button" label="°F⇒°C" pageFoldover="true"/>
 							</array>
 						</array>
 					</panel>
@@ -1282,7 +1283,7 @@
 			</MacroQword>
 		</region>
 
-		<!-- Everything for keeping mode buttons sycronized with the stack mode -->
+		<!-- Everything for keeping mode buttons synchronized with the stack mode -->
 		<region>
 			<DispChanged>
 				<stack action="StackBox.ApplyDispToSelected"/>
@@ -1406,7 +1407,22 @@
 			<button ref="lbToKg.Button" event="longPress">
 				<constant_inverse ref="lbToKg" label="kg⇒lb"/>
 			</button>
-		</region>
+
+            <button ref="fToC.Button" event="click">
+                <stack action="StackBox.ApplyConsole"/>
+                <constant_push ref="fToC_32"/>
+                <stack action="MathSubtract.Action"/>
+                <constant_multiply ref="fToC_5"/>
+                <constant_inverse ref="fToC_9" label="&#8529;"/>
+            </button>
+            <button ref="fToC.Button" event="longPress">
+                <stack action="StackBox.ApplyConsole"/>
+                <constant_multiply ref="fToC_9"/>
+                <constant_inverse ref="fToC_5" label="&#8533;"/>
+                <constant_push ref="fToC_32"/>
+                <stack action="MathAdd.Action"/>
+            </button>
+        </region>
 	</behavior>
 
 	<values>
@@ -1429,6 +1445,9 @@
 -->
 			<constant ID="ozToG" label="oz⇒g" approximate="28.34952313"/>
 			<constant ID="lbToKg" label="lb⇒kg" approximate="0.45359237"/>
+			<constant ID="fToC_32" label="32" integer="32"/>
+			<constant ID="fToC_5" label="5" integer="5"/>
+			<constant ID="fToC_9" label="9" integer="9"/>
 		</region>
 	</values>
 </root>
